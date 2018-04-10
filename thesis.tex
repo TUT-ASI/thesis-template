@@ -1,0 +1,99 @@
+% This template is created by Hannes Kinks in 2016
+% Was extended by Siavoosh Payandeh Azad in 2018
+% If you want to contribute or want to report bugs, 
+% send an email to: siavoosh.azad@ttu.ee
+% -----------------------------------------------
+\documentclass{MasterThesisTUT}
+
+% -----------------------------------------------
+%				Some Guidelines for 
+%				 Using the template
+% -----------------------------------------------
+%	1. DO NOT MODIFY THE CLASS FILE!
+%   2. DO NOT MODIFY THE CLASS FILE!
+% 	3. Try to keep the document modular (use 
+%      chapters and figures folders)	
+%----------------------------------
+% 		some useful packages, not 
+%	necessary for the Template
+%----------------------------------
+%	- subfigure package is deprecated! please 
+%      use subcaption package instead.
+%   - Use hhline instead of cline package
+\usepackage{graphicx} % Figures inside text
+\usepackage{url} % For using URLs
+\usepackage{blindtext} % Stubs
+\usepackage{color}	% used for \textcolor
+\usepackage{multirow}	% for multi-row cells in table
+\usepackage{hhline}	% for customizing the horizontal lines in tables
+\usepackage{tcolorbox}	% for gray text boxes on pages 17 and 19
+\usepackage{xfrac}	% for some fancy fraction numbers used in the document
+\usepackage{subcaption} % used for figures with sub figures a,b, etc. Do not use subfigure package, its deprecated!
+
+%----------------------------------
+% 		Edit your information here! 
+%----------------------------------
+\authorname{[Author's Name]} % Name of the author
+\thesistitle{[Title of The thesis]} % Title of Thesis
+\estonianthesistitle{[Title of The thesis in Estonian]} % Title of Thesis
+\supervisorname{[Supervisor' Name, Title]} % Name of the supervisor
+\cosupervisorname{[Co-supervisor' Name, Title]} % Name of the cosupervisor
+\programcode{[IAY70LT]}
+\studentcode{[1234 ABCD]}
+\begin{document}
+
+%------------------------------TITLE PAGE---------------------------------
+\maketitlepage
+
+%------------------------------TIITELLEHT EST---------------------------------
+\maketitlepageeesti
+
+%---------------------------Author's declaration of originality-------------------------
+\input{chapters/Declaration.tex}
+
+%-----------------------------ABSTRACT-----------------------------------
+\input{chapters/Abstract.tex}
+%---------------------------ANNOTATSIOON---------------------------------
+\input{chapters/Annotatsioon.tex}
+%---------------------LÜHENDITE JA MÕISTETE SÕNASTIK---------------------
+\input{chapters/Abbreviations.tex}
+
+%----------------------------Table of Contents----------------------------------
+\singlespacing
+\tableofcontents
+\newpage
+%----------------------List of figures-------------------------------
+\listoffigures
+\pagebreak
+%----------------------List of tables---------------------------------
+\listoftables
+\pagebreak
+\onehalfspacing
+%-----------------------------Introduction-------------------------------
+\input{chapters/Introduction.tex}
+%-------------------------------TOPIC START---------------------------
+\input{chapters/Chapter1.tex}
+
+\input{chapters/Chapter2.tex}
+
+%-------------------------------CONCLUSION---------------------------
+\input{chapters/Summary.tex}
+
+%-------------------------------Bibliography-------------------------
+\bibliographystyle{ieeetr}
+\footnotesize
+\setstretch{0}
+\bibliography{literature}  % viide bibtex failile (literature.bib)
+
+\newpage
+
+\begin{appendices}
+\renewcommand{\thesection}{\arabic{section}-}
+
+\section{[appendix name]}
+
+\section{[appendix name]}
+\end{appendices}
+
+\end{document}
+
