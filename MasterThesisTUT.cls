@@ -21,7 +21,8 @@
 \LoadClass[a4paper, 12pt]{article}
 
 \usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=3cm, right=3cm,
-marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry} % Geometry of the page
+% ↓ Geometry of the page
+marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 % if you want to see the frame use this option: showframe
 
 % paragraph setup
@@ -41,7 +42,9 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry} % 
 
 \usepackage[titletoc, title]{appendix}
 
-\usepackage[font=footnotesize, labelsep=period, textformat= period]{caption} % Used for captioning tables and figures, set font to 10, Adds period to the end of table or figure
+% ↓ Used for captioning tables and figures, set font to 10, Adds
+% ↓ period to the end of table or figure
+\usepackage[font=footnotesize, labelsep=period, textformat= period]{caption}
 
 % -------------------------------------------
 % Formatting the Tables
@@ -57,7 +60,9 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry} % 
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 
 \setlength{\tabcolsep}{5 pt}
-\renewcommand{\arraystretch}{1.5} % for setting the line spacing inside a table to 6pt before and after, since one line spacing is 12 pt
+% ↓ for setting the line spacing inside a table to 6pt before and
+% ↓ after, since one line spacing is 12 pt
+\renewcommand{\arraystretch}{1.5}
 
 % --------------------------------------------
 % Formatting the Lists
@@ -94,7 +99,7 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry} % 
 \let\stdsection\section
 \renewcommand\section{\newpage\stdsection}
 
-% ------------------------definitions------
+% --------------- definitions ---------------
 \newcommand*{\authorname}[1]{\def\nameofauthor{#1}}
 \newcommand*{\thesistitle}[1]{\def\titleofthesis{#1}}
 \newcommand*{\estonianthesistitle}[1]{\def\estoniantitleofthesis{#1}}
@@ -146,7 +151,7 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry} % 
 % Title Page Estonian
 % ------------------------------
 \newcommand{\maketitlepageeesti}{
-  \thispagestyle{fancy} % Leht sisaldab päist ja jalust
+  \thispagestyle{fancy} % for header and footer
   \renewcommand{\headrulewidth}{0pt} % removes horizontal line from the header
   \renewcommand{\footrulewidth}{0pt} % removes horizontal line from the footer
   \headheight = 57pt % Paneb paika päise laiuse (vastavalt kompilaatori soovitusele)
@@ -161,7 +166,7 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry} % 
     Arvutitehnika instituut
   }
 
-  \vspace*{7 cm} % Tekitab lehe alguse ja teksti vahele tühja ala vastava laiusega
+  \vspace*{7 cm} % space before text and start of the page
 
   \begin{center} % centered text
     \codeofprogram\\[0cm]
@@ -181,6 +186,6 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry} % 
   \end{flushright}
 
   \cfoot{Tallinn \the\year} % Footer with location & year
-  % \renewcommand{\headrulewidth}{0pt} %Eemaldab päisest horisontaalse joone
+  % \renewcommand{\headrulewidth}{0pt} % removes horizontal line from header
   \pagebreak % page end
 }
