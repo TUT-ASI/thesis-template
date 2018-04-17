@@ -12,7 +12,7 @@
 %	1. DO NOT MODIFY THE CLASS FILE!
 %   2. DO NOT MODIFY THE CLASS FILE!
 % 	3. Try to keep the document modular (use 
-%      chapters and figures folders)	
+%      chapters and figures folders)
 %----------------------------------
 % 		some useful packages, not 
 %	necessary for the Template
@@ -30,12 +30,19 @@
 \usepackage{xfrac}	% for some fancy fraction numbers used in the document
 \usepackage{subcaption} % used for figures with sub figures a,b, etc. Do not use subfigure package, its deprecated!
 
+% use the following package if you need pseudo-code
+% also, instead of using \caption please use:
+% \captionof{figure}{[here is your caption!]}
+% since algorithms should be declared as figure!
+\usepackage[linesnumbered]{algorithm2e}
+\SetAlFnt{\small\bfseries\ttfamily}
+
 %----------------------------------
 % 		Edit your information here! 
 %----------------------------------
 \authorname{[Author's Name]} % Name of the author
 \thesistitle{[Title of The thesis]} % Title of Thesis
-\estonianthesistitle{[Title of The thesis in Estonian]} % Title of Thesis
+\estonianthesistitle{[Lõputöö pealkiri]} % Title of Thesis
 \supervisorname{[Supervisor' Name, Title]} % Name of the supervisor
 \cosupervisorname{[Co-supervisor' Name, Title]} % Name of the cosupervisor
 \programcode{[IAY70LT]}

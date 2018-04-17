@@ -194,7 +194,7 @@ the header row is duplicated at the beginning of each page (for an example see T
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/TTU_peamine_logo_EST_print}
+\includegraphics[width=0.8\textwidth]{figures/TTU_peamine_logo_EST_print}
 \caption{ Example: TUT main logo in Estonian}
 \label{fig:logo}
 \end{figure}
@@ -205,7 +205,7 @@ Figure \ref{fig:logo} presents a correctly formatted example of figure with shor
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/TTU_alternatiivne_logo_EST_ENG_print}
+\includegraphics[width=0.8\textwidth]{figures/TTU_alternatiivne_logo_EST_ENG_print}
 \caption{Example: The alternative dual-language logo for Tallinn University of Technology. The logo is surrounded by a protected area (white space around) which guarantees its distinctiveness. Placing text or other graphical elements in the protected area is prohibited. The minimum height for the logo is 12 mm}
 \label{fig:logo2}
 \end{figure}
@@ -215,18 +215,18 @@ Figure \ref{fig:logo2} presents correctly formatted example of a figure with lon
 
 For multi-line captions style Caption\_multiline is applied to or align Justify.
 
-\begin{figure}[!t]
+\begin{figure}[!ht]
 \centering
-	 \begin{subfigure}[b]{0.3\textwidth}
+	 \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/TTU_peamine_logo_ENG_print}
         \caption{}
     \end{subfigure}
     \qquad
-    \begin{subfigure}[b]{0.3\textwidth}
+    \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/ttu_peamine_logo_eng_must-valge_negatiivis}
         \caption{}
     \end{subfigure}
-    \caption{Example: TUT main logo in: (a)English, (b) negative black and white}
+    \caption{Example: TUT main logo in: (a) English, (b) negative black and white}
     \label{fig:logo3}
 \end{figure}
 
@@ -238,13 +238,29 @@ caption title in case of a multi-part figure.
 
 
 Program code (source code) is formatted on the same principles as figures using monospaced font (for example Courier, Courier New or Consolas) with single line spacing. The template contains a defined style Program\_code for this purpose. Figure
-4 presents an example of formatted program code.
+\ref{alg:example} presents an example of formatted program code.
 
 Program code must always be correctly intended. The code is presented continuously on the same page, whenever possible. This is achieved by style Program\_code and its application during formatting.
 
 The first line of the program code starts from the left border. To obtain visually horizontal centered alignment, select the whole code and use the Increase Indent option.
 
 Program code is captioned as figure.
+
+\begin{algorithm}[!ht]
+ Public Function computeSomething() \\
+ Dim i, j As Integer\\
+\For {i = 1 To 10}{
+    \For {j = 1 To 10}{
+    	Do something in loop\\
+    Next j\\
+    }
+	Next i\\
+    }
+Return i + j\\
+End Function\\
+%use \captionof since algorithm should be declared as figure!
+\captionof{figure}{How to write algorithms}\label{alg:example}
+\end{algorithm}
 
 
 \subsubsection{Mathematical expressions and equations}
