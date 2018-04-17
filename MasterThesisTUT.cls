@@ -86,8 +86,6 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 \titlespacing*{\subsubsection}{0pt}{12pt}{0pt}
 
 % --------------------------------------------
-\usepackage{lastpage} % last page
-
 \setcounter{secnumdepth}{4} % Levels
 
 \usepackage{fancyhdr} % Usage of headers and footers
