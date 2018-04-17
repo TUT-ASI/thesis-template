@@ -1,3 +1,179 @@
 \section{[Chapter Title]}
 
+This chapter provides some essential \LaTeX examples (lists, tables,
+etc.) and hints.
+
+\subsection{Hints for text processing}
+
+Here are some tips for using \LaTeX:
+
+\begin{itemize}
+\item Words are separated by one or       more space characters between
+  them. If a word is followed by a punctuation mark, punctuation should
+  follow the word immediately, and a space character is should be added
+  after punctuation. Redundant
+  spaces      are
+  automatically             ignored.
+
+\item Text is automatically divided into lines. The division of text
+  into paragraphs is done by using two newlines.
+
+\item Sometimes it is necessary to keep words or symbols together so
+  that they will not be distributed on separate lines, for example
+  initials of given name and surname. To add such a non-breaking space
+  use \textasciitilde\ character (example: Kersti~Kaljulaid).
+
+% TODO ↓ recommend extdash package
+\item To hold together words separated with hyphen, use nonbreaking
+  hyphen, which can be added with keyboard combination
+  Ctrl+Shift+hyphen.
+
+\item \textbf{A dash} (--) is longer than hyphen and it is not just
+  the minus symbol. Use two minus characters to insert a dash
+  (example: --).
+
+% TODO ↓ what' the LaTeX equivalent for this?
+\item Hyphenation should not be something to worry about. If you want to hyphenate a
+  word manually, just add Ctrl+Hyphen.
+
+% TODO ↓ is this correct?
+\item To break a long line (e.g., title), use double backslash (example: hello\\world).
+\end{itemize}
+
+\subsection{Unordered list (example)}
+
+Unordered list example:
+\begin{itemize}
+\item Item in unordered list
+\item Deeper unordered list:
+  \begin{itemize}
+  \item \textbf{Foo}
+  \item \textit{Bar}
+  \end{itemize}
+\end{itemize}
+
+\subsection{Citation (example)}
+
+% TODO by default citations are not linked in the resulting PDF, is
+%      there any solution to this?
+
 Example of citation \cite{urlSource}.
+
+\newpage
+\subsection{Table (example)}
+
+% TODO broken a bit,  fix it.
+
+\begin{table}[!h]
+  \caption{Mandatory and optional parts of thesis in the required
+    order of their presentation}
+  \centering
+  \begin{tabular}{|L{5.1cm}|L{9.1cm}|}
+    \hline
+    \textbf{Column 1} & \textbf{Column 2}\\ \hline
+    One row     & Some text \\ \hline
+    Another row & Multi-line cell
+
+                  More text here\\ \hline
+
+    Foo & Text here\\ \hhline{-~~}
+    Bar & & (more bar) \\\hhline{-~~}
+    Baz & \\ \hline
+  \end{tabular}
+\end{table}
+
+\newpage
+\subsection{Fancy Table (example)}
+
+% TODO take some example from Siavoosh
+
+\subsection{Figures (example)}
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/TTU_peamine_logo_EST_print}
+  \caption{ Example: TUT main logo in Estonian}
+  \label{fig:logo}
+\end{figure}
+
+Figure \ref{fig:logo} presents an example of figure with short single
+line caption.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/TTU_alternatiivne_logo_EST_ENG_print}
+  \caption{Example: \blindtext} % TODO this HORRIBLY shows up in “List of Figures”
+  \label{fig:logo2}
+\end{figure}
+
+Figure \ref{fig:logo2} presents an example of a figure with long multi-line caption.
+
+
+\begin{figure}[!ht]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{figures/TTU_peamine_logo_ENG_print}
+    \caption{}
+  \end{subfigure}
+  \qquad
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{figures/ttu_peamine_logo_eng_must-valge_negatiivis}
+    \caption{}
+  \end{subfigure}
+  \caption{Example: TUT main logo in: (a) English, (b) negative black and white}
+  \label{fig:logo3}
+\end{figure}
+
+Figure \ref{fig:logo3} presents an example of a multi-part figure.
+
+\subsection{Program code}
+
+Figure \ref{alg:example} presents an example of formatted program
+code.
+
+\begin{algorithm}[!ht]
+  Public Function computeSomething() \\
+  Dim i, j As Integer\\
+  \For {i = 1 To 10}{
+    \For {j = 1 To 10}{
+      Do something in loop\\
+      Next j\\
+    }
+    Next i\\
+  }
+  Return i + j\\
+  End Function\\
+  % use \captionof since algorithm should be declared as figure!
+  \captionof{figure}{How to write algorithms}\label{alg:example}
+\end{algorithm}
+
+
+\subsection{Mathematical expressions and equations (example)}
+
+% TODO ↓ show example of proper referencing
+Equation (1) presents an example of correct formatting and referencing.
+
+\begin{equation}
+  (x+a)^n = \sum_{k=0}^{n} {n \choose k} x^ka^{n-k}
+\end{equation}
+
+
+\subsection{Citing and references (example)}
+
+ Bibliography referencing requirements are described in the TUT
+library reference list
+\footnote{http://www.ttu.ee/institutes/library-3/for-students/reference-list/}.
+
+\subsection{Colored temporary text}
+
+\textcolor{red}{[Delete this note!]}
+
+\subsection{Footnotes (example)}
+
+Here is how you can use\footnote{In case you ever need to add a footnote.} footnotes.
+
+\subsection{Colored box (example)}
+
+\begin{tcolorbox}[arc=0pt, outer arc=0pt, boxrule=0pt, left=0mm]
+\blindtext
+\end{tcolorbox}

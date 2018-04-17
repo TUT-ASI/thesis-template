@@ -10,15 +10,16 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry} % 
 \setlength{\parskip}{12pt}
 \setlength{\parindent}{0pt}
 
-\usepackage{times}   % for the font
+\usepackage{times} % for the font
 
 \usepackage[perpage]{footmisc} % for resetting footnotes numbering in each page!
 
 \usepackage{titlesec} % For editing titles
 
-\usepackage[utf8]{inputenc} % %UTF8 decoding
-\usepackage[T1]{fontenc} % For using estonian and russian letters
-% \usepackage[T1, T2A]{fontenc} % For using estonian and russian letters
+\usepackage[utf8]{inputenc}     % UTF8 decoding
+\usepackage[T1]{fontenc}        % For using Estonian and Russian letters
+% \usepackage[T1, T2A]{fontenc} % For using Estonian and Russian letters
+% TODO ↑ so which one?
 
 \usepackage[titletoc, title]{appendix}
 
@@ -44,8 +45,8 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry} % 
 % Formatting the Lists
 % --------------------------------------------
 
-\usepackage{amssymb} % For square itemized lists
-\renewcommand{\labelitemi}{\tiny$\blacksquare$} %For square itemized lists
+\usepackage{amssymb}                            % For square itemized lists
+\renewcommand{\labelitemi}{\tiny$\blacksquare$} % For square itemized lists
 
 \usepackage{enumitem}
 \setlist[1]{itemsep=6pt, parsep = 0pt, labelsep = 0.63 cm}
@@ -100,7 +101,7 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry} % 
         Tallinn University of Technology\\
       \end{Large} }
     Faculty of Information Technology\\
-    Department of Computer Engineering
+    Department of Computer Engineering % TODO department should be configurable
   }
   \vspace*{7 cm}
 
@@ -108,22 +109,19 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry} % 
     \codeofprogram\\[0cm]
     \nameofauthor ~\codeofstudent\\
     \begin{LARGE}
-      \textsc{\titleofthesis\\}
-      % \textsc{Implementing neuroevolution on reprogrammable hardware\\}
+      \textsc{\titleofthesis\\} % TODO bold and uppercase
     \end{LARGE}
     Master Thesis\\[2cm]
   \end{center}
 
-  \begin{flushright} %Joondab teksti paremale
+  % TODO “Supervisor” and “Co-Supervisor” should be right-aligned
+  \begin{flushright}
     Supervisor: \nameofsupervisor \\
-
     Co-Supervisor: \nameofcosupervisor \\[0cm]
-
   \end{flushright}
 
   \cfoot{Tallinn \the\year}
-  % \renewcommand{\headrulewidth}{0pt} %Eemaldab päisest horisontaalse joone
-  \pagebreak %Lehe lõpp
+  \pagebreak
 }
 
 % ------------------------------
@@ -131,23 +129,23 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry} % 
 % ------------------------------
 \newcommand{\maketitlepageeesti}{
   \thispagestyle{fancy} % Leht sisaldab päist ja jalust
-  \renewcommand{\headrulewidth}{0pt} % Eemaldab päisest horisontaalse joone
-  \renewcommand{\footrulewidth}{0pt} % Eemaldab jalusest horisontaalse joone
+  \renewcommand{\headrulewidth}{0pt} % removes horizontal line from the header
+  \renewcommand{\footrulewidth}{0pt} % removes horizontal line from the footer
   \headheight = 57pt % Paneb paika päise laiuse (vastavalt kompilaatori soovitusele)
-  \headsep = 0pt % Vähendab päise ja teksti vahelise kauguse nullini
-  % \footskip = 10pt %Jaluse ruum
+  \headsep = 0pt % less space between text and headers
+  % \footskip = 10pt % Jaluse ruum
 
   \chead{ % Paigutab järgneva teksti päises keskele
-    \textsc{\begin{Large} % Tekst suurtähtedega ja suuremaks
+    \textsc{\begin{Large} % uppercase big text
         Tallinna tehnikaülikool\\
       \end{Large} }
-    Infotehnoloogia teaduskond\\
+    Infotehnoloogia teaduskond\\ % TODO department should be configurable
     Arvutitehnika instituut
   }
 
   \vspace*{7 cm} % Tekitab lehe alguse ja teksti vahele tühja ala vastava laiusega
 
-  \begin{center} % Tekst keskele
+  \begin{center} % centered text
     \codeofprogram\\[0cm]
     \nameofauthor ~\codeofstudent\\
     \begin{LARGE}
@@ -157,14 +155,14 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry} % 
     Magistritöö\\[2cm]
   \end{center}
 
-  \begin{flushright} % Joondab teksti paremale
+  \begin{flushright} % text on the right
     Juhendaja: \nameofsupervisor\\
 
     Kaasjuhendaja: \nameofcosupervisor\\[0cm]
 
   \end{flushright}
 
-  \cfoot{Tallinn \the\year} % Lisab asukoha ja kuupäeva jalusesse
+  \cfoot{Tallinn \the\year} % Footer with location & year
   % \renewcommand{\headrulewidth}{0pt} %Eemaldab päisest horisontaalse joone
-  \pagebreak %Lehe lõpp
+  \pagebreak % page end
 }

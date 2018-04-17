@@ -11,14 +11,12 @@
 % -----------------------------------------------
 % 1. DO NOT MODIFY THE CLASS FILE!
 % 2. DO NOT MODIFY THE CLASS FILE!
-% 3. Try to keep the document modular (use
-% chapters and figures folders)
+% 3. Try to keep the document modular (use chapters and figures folders)
 % ----------------------------------
 % some useful packages, not
 % necessary for the Template
 % ----------------------------------
-% - subfigure package is deprecated! please
-% use subcaption package instead.
+% - subfigure package is deprecated! please use subcaption package instead.
 % - Use hhline instead of cline package
 \usepackage{graphicx}   % Figures inside text
 \usepackage{url}        % For using URLs
@@ -37,69 +35,97 @@
 \usepackage[linesnumbered]{algorithm2e}
 \SetAlFnt{\small\bfseries\ttfamily}
 
-% ----------------------------------
-% Edit your information here!
-% ----------------------------------
-\authorname{[Author's Name]} % Name of the author
-\thesistitle{[Title of The thesis]} % Title of Thesis
-\estonianthesistitle{[Lõputöö pealkiri]} % Title of Thesis
-\supervisorname{[Supervisor' Name, Title]} % Name of the supervisor
+% -------------------------------
+% ⚠ Edit your information here! ⚠
+% -------------------------------
+\authorname{[Author's Name]}                    % Name of the author
+\thesistitle{[Title of The thesis]}             % Title of Thesis
+\estonianthesistitle{[Lõputöö pealkiri]}        % Title of Thesis
+\supervisorname{[Supervisor' Name, Title]}      % Name of the supervisor
 \cosupervisorname{[Co-supervisor' Name, Title]} % Name of the cosupervisor
 \programcode{[IAY70LT]}
-\studentcode{[1234 ABCD]}
+\studentcode{[1234ABCD]}
 \begin{document}
 
-% ------------------------------TITLE PAGE---------------------------------
+% ----------------------------- TITLE PAGE --------------------------------
 \maketitlepage
 
-% ------------------------------TIITELLEHT EST---------------------------------
+% ----------------------------- TITLE PAGE (EST) --------------------------
 \maketitlepageeesti
 
-% ---------------------------Author's declaration of originality-------------------------
+% ------------------- Author's declaration of originality -----------------
 \input{chapters/Declaration.tex}
 
-% -----------------------------ABSTRACT-----------------------------------
-\input{chapters/Abstract.tex}
-% ---------------------------ANNOTATSIOON---------------------------------
-\input{chapters/Annotatsioon.tex}
-% ---------------------LÜHENDITE JA MÕISTETE SÕNASTIK---------------------
+% ----------------------------- ABSTRACT ----------------------------------
+\input{chapters/Abstract-eng.tex}
+% ----------------------------- ABSTRACT (In Estonian) --------------------
+\input{chapters/Abstract-est.tex}
+% ----------------------------- ABBREVIATIONS -----------------------------
 \input{chapters/Abbreviations.tex}
 
-% ----------------------------Table of Contents----------------------------------
+% -------------------------- TABLE OF CONTENTS ----------------------------
 \singlespacing
-\tableofcontents
+\tableofcontents % TODO “Table of Contents” capitalized
 \newpage
-% ----------------------List of figures-------------------------------
-\listoffigures
+% --------------------- LIST OF FIGURES ------------------------------
+\listoffigures % TODO “List of Figures” capitalized
 \pagebreak
-% ----------------------List of tables---------------------------------
-\listoftables
+% --------------------- LIST OF TABLES --------------------------------
+\listoftables % TODO “List of Tables” capitalized
 \pagebreak
 \onehalfspacing
-% -----------------------------Introduction-------------------------------
+% ---------------------------- INTRODUCTION ------------------------------
 \input{chapters/Introduction.tex}
-% -------------------------------TOPIC START---------------------------
+% ------------------------------ TOPIC START --------------------------
 \input{chapters/Chapter1.tex}
 
 \input{chapters/Chapter2.tex}
 
-% -------------------------------CONCLUSION---------------------------
+% ------------------------------ CONCLUSION --------------------------
 \input{chapters/Summary.tex}
 
-% -------------------------------Bibliography-------------------------
+% ------------------------------ BIBLIOGRAPHY ------------------------
 \bibliographystyle{ieeetr}
 \footnotesize
 \setstretch{0}
-\bibliography{literature}  % viide bibtex failile (literature.bib)
+\bibliography{literature} % link to bibtex file (literature.bib)
 
 \newpage
 
 \begin{appendices}
-  \renewcommand{\thesection}{\arabic{section}-}
+  % TODO extra spacing before Appendix?
+  \renewcommand{\thesection}{\arabic{section} --}
 
-  \section{[appendix name]}
+  \section{[Heading of Appendix]}
+  Program code example:
 
-  \section{[appendix name]}
+  \begin{algorithm}[!ht]
+    Public Function computeSomething() \\
+    Dim i, j As Integer\\
+    \For {i = 1 To 10}{
+      \For {j = 1 To 10}{
+        Do something in loop\\
+        Next j\\
+      }
+      Next i\\
+    }
+    Return i + j\\
+    End Function\\
+    % use \captionof since algorithm should be declared as figure!
+    \captionof{figure}{How to write algorithms}\label{alg:example}
+  \end{algorithm}
+
+  % TODO ↑ it says “Figure 5”, but we are in the Appendix. Is it correct?
+
+  \section{[Heading of Appendix]}
+  This template can be found on:
+  \begin{itemize}
+  \item TODO Overleaf link % TODO
+  \item TODO GitHub link % TODO
+  \end{itemize}
+
+  Submit your bug reports by filing a GitHub issue or simply writing
+  an email to siavoosh.azad@ttu.ee.
 \end{appendices}
 
 \end{document}
