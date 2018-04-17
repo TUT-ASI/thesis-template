@@ -1,3 +1,21 @@
+% Thesis template by:
+%
+%     Priit Ruberg 2015
+%     Hannes Kinks 2016
+%     Siavoosh Payandeh Azad 2018
+%     Aleks-Daniel Jakimenko-Aleksejev 2018
+%
+% This template is in public domain.
+%
+% To the extent possible under law, the person who dedicated this
+% template to public domain has waived all copyright and related or
+% neighboring rights to this template.
+%
+% If you want to contribute or want to report bugs, please
+% file an issue on GitHub:
+%     https://github.com/TUT-ASI/thesis-template/issues
+% or simply send an email to siavoosh.azad@ttu.ee
+
 \ProvidesClass{MasterThesisTUT}[7/9/2018 custom thesis class]
 % \documentclass[a4paper, 12pt]{article}
 \LoadClass[a4paper, 12pt]{article}
