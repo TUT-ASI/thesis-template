@@ -116,20 +116,20 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 % ------------------------------
 
 \newcommand{\maketitlepage}{
-  \thispagestyle{fancy}
-  \renewcommand{\headrulewidth}{0pt}
-  \renewcommand{\footrulewidth}{0pt}
-  \headheight = 57pt
-  \headsep = 0pt
+  \thispagestyle{fancy}  % for header and footer
+  \renewcommand{\headrulewidth}{0pt} % removes horizontal line from the header
+  \renewcommand{\footrulewidth}{0pt} % removes horizontal line from the footer
+  \headheight = 57pt % Paneb paika päise laiuse (vastavalt kompilaatori soovitusele)
+  \headsep = 0pt % less space between text and headers
 
-  \chead{
-    \textsc{\begin{Large}
+  \chead{ % centered
+    \textsc{\begin{Large} % uppercase big text
         Tallinn University of Technology\\
       \end{Large} }
     \school\\
     \department
   }
-  \vspace*{7 cm}
+  \vspace*{7 cm} % space before text and start of the page
 
   \begin{center}
     \codeofprogram\\[0cm]
@@ -140,16 +140,14 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
     Master Thesis\\[2cm]
   \end{center}
 
-  % TODO “Supervisor” and “Co-Supervisor” should be right-aligned
-  
   \begin{flushright}
- 	\begin{tabularx}{0.5\textwidth}{rl}
- 	Supervisor: & \nameofsupervisor \\
-    & \titleofsupervisor \\
-    Co-Supervisor: &  \nameofcosupervisor\\
-    & \titleofcosupervisor \\
- 	\end{tabularx} \\[0cm]
- \end{flushright}
+    \begin{tabularx}{0.5\textwidth}{rl}
+      Supervisor: & \nameofsupervisor    \\
+      \           & \titleofsupervisor    \\
+      Co-Supervisor: & \nameofcosupervisor \\
+      \              & \titleofcosupervisor \\
+    \end{tabularx} \\[0cm]
+  \end{flushright}
 
   \cfoot{Tallinn \the\year}
   \pagebreak
@@ -164,9 +162,8 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
   \renewcommand{\footrulewidth}{0pt} % removes horizontal line from the footer
   \headheight = 57pt % Paneb paika päise laiuse (vastavalt kompilaatori soovitusele)
   \headsep = 0pt % less space between text and headers
-  % \footskip = 10pt % Jaluse ruum
 
-  \chead{ % Paigutab järgneva teksti päises keskele
+  \chead{ % centered
     \textsc{\begin{Large} % uppercase big text
         Tallinna tehnikaülikool\\
       \end{Large} }
@@ -176,27 +173,24 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 
   \vspace*{7 cm} % space before text and start of the page
 
-  \begin{center} % centered text
+  \begin{center}
     \codeofprogram\\[0cm]
     \nameofauthor ~\codeofstudent\\
     \begin{LARGE}
       \textsc{\estoniantitleofthesis\\}
-      % \textsc{Implementing neuroevolution on reprogrammable hardware\\}
     \end{LARGE}
     Magistritöö\\[2cm]
   \end{center}
-	
-    \begin{flushright} % text on the right
- 	\begin{tabularx}{0.5\textwidth}{rl}
- 	Juhendaja: & \nameofsupervisor \\
-    & \titleofsupervisor \\
-    Kaasjuhendaja: &  \nameofcosupervisor\\
-    & \titleofcosupervisor \\
- 	\end{tabularx} \\[0cm]
- \end{flushright}
- 
 
-  \cfoot{Tallinn \the\year} % Footer with location & year
-  % \renewcommand{\headrulewidth}{0pt} % removes horizontal line from header
-  \pagebreak % page end
+  \begin{flushright}
+    \begin{tabularx}{0.5\textwidth}{rl}
+      Juhendaja: & \nameofsupervisor     \\
+      \          & \titleofsupervisor     \\
+      Kaasjuhendaja: & \nameofcosupervisor \\
+      \              & \titleofcosupervisor \\
+    \end{tabularx} \\[0cm]
+  \end{flushright}
+
+  \cfoot{Tallinn \the\year}
+  \pagebreak
 }
