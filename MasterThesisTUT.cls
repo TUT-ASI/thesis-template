@@ -21,7 +21,7 @@
 
 \usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=3cm, right=3cm,
 % ↓ Geometry of the page
-marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
+marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead,showframe]{geometry}
 % if you want to see the frame use this option: showframe
 
 % paragraph setup
