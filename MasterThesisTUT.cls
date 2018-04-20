@@ -43,8 +43,6 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 \regtotcounter{table}
 \regtotcounter{figure}
 \regtotcounter{section}
-\addtocounter{section}{-1} % Introduction
-\addtocounter{section}{-1} % Summary
 
 % ↓ Used for captioning tables and figures, set font to 10, Adds
 % ↓ period to the end of table or figure
