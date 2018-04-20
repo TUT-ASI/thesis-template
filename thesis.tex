@@ -101,7 +101,16 @@
 \label{EndOfMainPart}
 \newpage
 
+%todo: find if we can somehow move this to the preamble!
+\let\svaddcontentsline\addcontentsline
+\renewcommand\addcontentsline[3]{%
+  \ifthenelse{\equal{#1}{lof}}{}%
+  {\ifthenelse{\equal{#1}{lot}}{}{\svaddcontentsline{#1}{#2}{#3}}}}
+  
+
 \begin{appendices}
+ \setcounter{table}{0}
+ \setcounter{figure}{0}
   \titleformat{\section}{\bfseries\Large}{Appendix \thesection}{0.2em}{}
   \renewcommand{\thesection}{\arabic{section} --}
 
