@@ -78,9 +78,9 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 % --------------------------------------------
 % Formatting the titles
 % --------------------------------------------
-\renewcommand{\contentsname}{\centering \bfseries Table of contents}
-\renewcommand{\listfigurename}{\centering \bfseries List of figures}
-\renewcommand{\listtablename}{\centering \bfseries List of tables}
+\renewcommand{\contentsname}{\centering \bfseries Table of Contents}
+\renewcommand{\listfigurename}{\centering \bfseries List of Figures}
+\renewcommand{\listtablename}{\centering \bfseries List of Tables}
 
 \titlespacing*{\section}{0pt}{60pt}{6pt}
 \titlespacing*{\subsection}{0pt}{12pt}{0pt}
