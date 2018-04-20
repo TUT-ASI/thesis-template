@@ -33,11 +33,11 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 
 \usepackage[perpage]{footmisc} % for resetting footnotes numbering in each page!
 
-\usepackage{titlesec} % For editing titles
+\usepackage{titlesec} % for editing titles
 
 \usepackage[utf8]{inputenc}     % UTF8 decoding
-\usepackage[T1]{fontenc}        % For using Estonian and Russian letters
-% \usepackage[T1, T2A]{fontenc} % For using Estonian and Russian letters
+\usepackage[T1]{fontenc}        % for using Estonian and Russian letters
+% \usepackage[T1, T2A]{fontenc} % for using Estonian and Russian letters
 % TODO ↑ so which one?
 
 \usepackage[titletoc, title]{appendix}
