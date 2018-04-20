@@ -7,12 +7,12 @@
 % 2. DO NOT MODIFY THE CLASS FILE!
 % 3. Try to keep the document modular (use `chapters` and `figures` folders)
 % ----------------------------------
-% some useful packages, not
-% necessary for the Template
-% ----------------------------------
 % Recommendations:
 % - subfigure package is deprecated! Please use subcaption package instead.
 % - Use hhline instead of cline package
+
+
+% some useful packages, not necessary for the template:
 
 \usepackage{graphicx}       % Figures inside text
 \usepackage{url}            % For using URLs
@@ -36,13 +36,13 @@
 % -------------------------------
 % ⚠ Edit your information here! ⚠
 % -------------------------------
-\authorname{[Author's Name]}                     % Name of the author
-\thesistitle{[Title of The thesis]}              % Title of Thesis (English)
-\estonianthesistitle{[Lõputöö pealkiri]}         % Title of Thesis (Estonian)
-\supervisorname{[Supervisor's Name]}      % Name of the supervisor
-\supervisortitle{[Supervisor's Title]}
-\cosupervisorname{[Co-supervisor's Name]} % Name of the co-supervisor
-\cosupervisortitle{[Co-Supervisor's Title]}
+\authorname{[Author's Name]}                % Name of the author
+\thesistitle{[Title of The thesis]}         % Title of Thesis (English)
+\estonianthesistitle{[Lõputöö pealkiri]}    % Title of Thesis (Estonian)
+\supervisorname{[Supervisor's Name]}        % Name of the supervisor
+\supervisortitle{[Supervisor's Title]}      % Supervisor's title
+\cosupervisorname{[Co-supervisor's Name]}   % Name of the co-supervisor
+\cosupervisortitle{[Co-Supervisor's Title]} % Co-supervisor's title
 \programcode{[IAY70LT]}
 \studentcode{[1234ABCD]}
 \school{School of Information Technologies}
@@ -53,13 +53,15 @@
 \begin{document}
 \sloppy % to make sure mbox does not go over the limit
 
+% Document structure:
+
 % ----------------------------- TITLE PAGE --------------------------------
 \maketitlepage
 
 % ----------------------------- TITLE PAGE (EST) --------------------------
 \maketitlepageeesti
 
-% ------------------- Author's declaration of originality -----------------
+% ----------------------------- DECLARATION -------------------------------
 \input{chapters/Declaration.tex}
 
 % ----------------------------- ABSTRACT ----------------------------------
@@ -69,28 +71,28 @@
 % ----------------------------- ABBREVIATIONS -----------------------------
 \input{chapters/Abbreviations.tex}
 
-% -------------------------- TABLE OF CONTENTS ----------------------------
+% ----------------------------- TABLE OF CONTENTS -------------------------
 \singlespacing
 \tableofcontents % TODO “Table of Contents” capitalized
 \newpage
-% --------------------- LIST OF FIGURES ------------------------------
+% ----------------------------- LIST OF FIGURES ---------------------------
 \listoffigures % TODO “List of Figures” capitalized
 \pagebreak
-% --------------------- LIST OF TABLES --------------------------------
+% ----------------------------- LIST OF TABLES ----------------------------
 \listoftables % TODO “List of Tables” capitalized
 \pagebreak
 \onehalfspacing
-% ---------------------------- INTRODUCTION ------------------------------
+% ----------------------------- INTRODUCTION ------------------------------
 \input{chapters/Introduction.tex}
-% ------------------------------ TOPIC START --------------------------
+% ----------------------------- CHAPTERS ----------------------------------
 \input{chapters/Chapter1.tex}
 
 \input{chapters/Chapter2.tex}
 
-% ------------------------------ CONCLUSION --------------------------
+% ----------------------------- CONCLUSION --------------------------------
 \input{chapters/Summary.tex}
 
-% ------------------------------ BIBLIOGRAPHY ------------------------
+% ----------------------------- BIBLIOGRAPHY ------------------------------
 \bibliographystyle{ieeetr}
 \footnotesize
 \setstretch{0}
