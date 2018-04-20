@@ -44,6 +44,7 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 % ↓ period to the end of table or figure
 \usepackage[font=footnotesize, labelsep=period, textformat= period]{caption}
 
+
 % -------------------------------------------
 % Formatting the Tables
 % -------------------------------------------
@@ -53,7 +54,7 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 \AfterEndEnvironment{tabular}{\normalsize}
 
 \usepackage{array}
-
+\usepackage{tabularx}
 % \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 
@@ -100,7 +101,9 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 \newcommand*{\thesistitle}[1]{\def\titleofthesis{#1}}
 \newcommand*{\estonianthesistitle}[1]{\def\estoniantitleofthesis{#1}}
 \newcommand*{\supervisorname}[1]{\def\nameofsupervisor{#1}}
+\newcommand*{\supervisortitle}[1]{\def\titleofsupervisor{#1}}
 \newcommand*{\cosupervisorname}[1]{\def\nameofcosupervisor{#1}}
+\newcommand*{\cosupervisortitle}[1]{\def\titleofcosupervisor{#1}}
 \newcommand*{\programcode}[1]{\def\codeofprogram{#1}}
 \newcommand*{\studentcode}[1]{\def\codeofstudent{#1}}
 \newcommand*{\school}[1]{\def\school{#1}}
@@ -138,10 +141,15 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
   \end{center}
 
   % TODO “Supervisor” and “Co-Supervisor” should be right-aligned
+  
   \begin{flushright}
-    Supervisor: \nameofsupervisor \\
-    Co-Supervisor: \nameofcosupervisor \\[0cm]
-  \end{flushright}
+ 	\begin{tabularx}{0.5\textwidth}{rl}
+ 	Supervisor: & \nameofsupervisor \\
+    & \titleofsupervisor \\
+    Co-Supervisor: &  \nameofcosupervisor\\
+    & \titleofcosupervisor \\
+ 	\end{tabularx} \\[0cm]
+ \end{flushright}
 
   \cfoot{Tallinn \the\year}
   \pagebreak
@@ -177,13 +185,16 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
     \end{LARGE}
     Magistritöö\\[2cm]
   \end{center}
-
-  \begin{flushright} % text on the right
-    Juhendaja: \nameofsupervisor\\
-
-    Kaasjuhendaja: \nameofcosupervisor\\[0cm]
-
-  \end{flushright}
+	
+    \begin{flushright} % text on the right
+ 	\begin{tabularx}{0.5\textwidth}{rl}
+ 	Juhendaja: & \nameofsupervisor \\
+    & \titleofsupervisor \\
+    Kaasjuhendaja: &  \nameofcosupervisor\\
+    & \titleofcosupervisor \\
+ 	\end{tabularx} \\[0cm]
+ \end{flushright}
+ 
 
   \cfoot{Tallinn \the\year} % Footer with location & year
   % \renewcommand{\headrulewidth}{0pt} % removes horizontal line from header
