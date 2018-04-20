@@ -102,8 +102,8 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 
 % --------------- definitions ---------------
 \newcommand*{\authorname}[1]{\def\nameofauthor{#1}}
-\newcommand*{\thesistitle}[1]{\def\titleofthesis{#1}}
-\newcommand*{\estonianthesistitle}[1]{\def\estoniantitleofthesis{#1}}
+\newcommand*{\thesistitle}[1]{\def\titleofthesis{\begin{LARGE}\bfseries\uppercase{#1}\end{LARGE}}}
+\newcommand*{\estonianthesistitle}[1]{\def\estoniantitleofthesis{\begin{LARGE}\bfseries\uppercase{#1}\end{LARGE}}}
 \newcommand*{\supervisorname}[1]{\def\nameofsupervisor{#1}}
 \newcommand*{\supervisortitle}[1]{\def\titleofsupervisor{#1}}
 \newcommand*{\cosupervisorname}[1]{\def\nameofcosupervisor{#1}}
@@ -138,21 +138,18 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
   \headsep = 0pt % less space between text and headers
 
   \chead{ % centered
-    \textsc{\begin{Large} % uppercase big text
-        Tallinn University of Technology\\
-      \end{Large} }
+    \uppercase{Tallinn University of Technology}\\
     \school\\
     \department
   }
-  \vspace*{7 cm} % space before text and start of the page
+
+  \vspace*{3 cm} % space before text and start of the page
 
   \begin{center}
     \codeofprogram\\[0cm]
-    \nameofauthor ~\codeofstudent\\
-    \begin{LARGE}
-      \textsc{\titleofthesis\\} % TODO bold and uppercase
-    \end{LARGE}
-    Master Thesis\\[2cm]
+    \nameofauthor ~\codeofstudent\\[2cm]
+    \titleofthesis\\[2cm]
+    Master's Thesis\\[3cm]
   \end{center}
 
   \begin{flushright}
@@ -179,22 +176,18 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
   \headsep = 0pt % less space between text and headers
 
   \chead{ % centered
-    \textsc{\begin{Large} % uppercase big text
-        Tallinna tehnikaülikool\\
-      \end{Large} }
+    \uppercase{Tallinna tehnikaülikool}\\
     \estonianschool\\
     \estoniandepartment
   }
 
-  \vspace*{7 cm} % space before text and start of the page
+  \vspace*{4 cm} % space before text and start of the page
 
   \begin{center}
     \codeofprogram\\[0cm]
-    \nameofauthor ~\codeofstudent\\
-    \begin{LARGE}
-      \textsc{\estoniantitleofthesis\\}
-    \end{LARGE}
-    Magistritöö\\[2cm]
+    \nameofauthor ~\codeofstudent\\[2cm]
+    \estoniantitleofthesis\\[2cm]
+    Magistritöö\\[3cm]
   \end{center}
 
   \begin{flushright}
