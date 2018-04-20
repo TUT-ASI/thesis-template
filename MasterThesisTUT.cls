@@ -19,6 +19,7 @@
 \ProvidesClass{MasterThesisTUT}[7/9/2018 custom thesis class]
 % \documentclass[a4paper, 12pt]{article}
 \LoadClass[a4paper, 12pt]{article}
+% TODO ↑ which one?
 
 \usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=3cm, right=3cm,
 % ↓ Geometry of the page
@@ -61,6 +62,7 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 \usepackage{tabularx}
 % \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+% TODO ↑ which one?
 
 \setlength{\tabcolsep}{5 pt}
 % ↓ for setting the line spacing inside a table to 6pt before and
@@ -124,17 +126,16 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 \newcommand*{\totaltables}[1]{\total{table}
   \ifnum\totvalue{table}=1{table}\else{tables}\fi
 }
-% No need to plurify in Estonian! Winner winner, chicken dinner.
+% No need to plurify in Estonian! Winner winner, kana dinner.
 
 % ------------------------------
 % Title Page English
 % ------------------------------
-
 \newcommand{\maketitlepage}{
-  \thispagestyle{fancy}  % for header and footer
+  \thispagestyle{fancy} % for header and footer
   \renewcommand{\headrulewidth}{0pt} % removes horizontal line from the header
   \renewcommand{\footrulewidth}{0pt} % removes horizontal line from the footer
-  \headheight = 57pt % Paneb paika päise laiuse (vastavalt kompilaatori soovitusele)
+  \headheight = 57pt % fancy header height
   \headsep = 0pt % less space between text and headers
 
   \chead{ % centered
@@ -172,7 +173,7 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
   \thispagestyle{fancy} % for header and footer
   \renewcommand{\headrulewidth}{0pt} % removes horizontal line from the header
   \renewcommand{\footrulewidth}{0pt} % removes horizontal line from the footer
-  \headheight = 57pt % Paneb paika päise laiuse (vastavalt kompilaatori soovitusele)
+  \headheight = 57pt % fancy header height
   \headsep = 0pt % less space between text and headers
 
   \chead{ % centered
@@ -181,7 +182,7 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
     \estoniandepartment
   }
 
-  \vspace*{4 cm} % space before text and start of the page
+  \vspace*{3 cm} % space before text and start of the page
 
   \begin{center}
     \codeofprogram\\[0cm]
