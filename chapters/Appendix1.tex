@@ -1,0 +1,18 @@
+\section{[Heading of Appendix]}
+  Program code example:
+
+  \begin{algorithm}[!ht]
+    Public Function computeSomething() \\
+    Dim i, j As Integer\\
+    \For {i = 1 To 10}{
+      \For {j = 1 To 10}{
+        Do something in loop\\
+        Next j\\
+      }
+      Next i\\
+    }
+    Return i + j\\
+    End Function\\
+    % use \captionof since algorithm should be declared as figure!
+    \captionof{figure}{How to write algorithms}\label{alg:example}
+  \end{algorithm}

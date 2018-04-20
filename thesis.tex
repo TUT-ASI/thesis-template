@@ -106,38 +106,10 @@
   \titleformat{\section}{\bfseries\Large}{Appendix \thesection}{0.2em}{}
   \renewcommand{\thesection}{\arabic{section} --}
 	
-  \section{[Heading of Appendix]}
-  Program code example:
-
-  \begin{algorithm}[!ht]
-    Public Function computeSomething() \\
-    Dim i, j As Integer\\
-    \For {i = 1 To 10}{
-      \For {j = 1 To 10}{
-        Do something in loop\\
-        Next j\\
-      }
-      Next i\\
-    }
-    Return i + j\\
-    End Function\\
-    % use \captionof since algorithm should be declared as figure!
-    \captionof{figure}{How to write algorithms}\label{alg:example}
-  \end{algorithm}
-
+  \input{chapters/Appendix1.tex}
   % TODO ↑ it says “Figure 5”, but we are in the Appendix. Is it correct?
-
-  \section{[Heading of Appendix]}
-  This template can be found on:
-  \begin{itemize}
-  \item \url{https://github.com/TUT-ASI/thesis-template}
-  \item TODO Overleaf link % TODO
-  \end{itemize}
-
-
-  If you want to contribute or want to report bugs, please
-  \href{https://github.com/TUT-ASI/thesis-template/issues}{file an issue}
-  on GitHub or simply send an email to $siavoosh.azad@ttu.ee$.
+  \input{chapters/Appendix2.tex}
+  
 \end{appendices}
 
 \addtocounter{section}{-1} % Introduction
