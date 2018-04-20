@@ -105,6 +105,8 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 \newcommand*{\cosupervisorname}[1]{\def\nameofcosupervisor{#1}}
 \newcommand*{\programcode}[1]{\def\codeofprogram{#1}}
 \newcommand*{\studentcode}[1]{\def\codeofstudent{#1}}
+\newcommand*{\school}[1]{\def\school{#1}}
+\newcommand*{\department}[1]{\def\department{#1}}
 
 % ------------------------------
 % Title Page English
@@ -121,8 +123,8 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
     \textsc{\begin{Large}
         Tallinn University of Technology\\
       \end{Large} }
-    Faculty of Information Technology\\
-    Department of Computer Engineering % TODO department should be configurable
+    \school\\
+    \department
   }
   \vspace*{7 cm}
 
