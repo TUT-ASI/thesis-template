@@ -104,8 +104,8 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 
 % --------------- definitions ---------------
 \newcommand*{\authorname}[1]{\def\nameofauthor{#1}}
-\newcommand*{\thesistitle}[1]{\def\titleofthesis{\begin{LARGE}\bfseries\uppercase{#1}\end{LARGE}}}
-\newcommand*{\estonianthesistitle}[1]{\def\estoniantitleofthesis{\begin{LARGE}\bfseries\uppercase{#1}\end{LARGE}}}
+\newcommand*{\thesistitle}[1]{\def\titleofthesis{\bfseries\uppercase{#1}}}
+\newcommand*{\estonianthesistitle}[1]{\def\estoniantitleofthesis{\bfseries\uppercase{#1}}}
 \newcommand*{\supervisorname}[1]{\def\nameofsupervisor{#1}}
 \newcommand*{\supervisortitle}[1]{\def\titleofsupervisor{#1}}
 \newcommand*{\cosupervisorname}[1]{\def\nameofcosupervisor{#1}}
@@ -149,7 +149,9 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
   \begin{center}
     \codeofprogram\\[0cm]
     \nameofauthor ~\codeofstudent\\[2cm]
+    \begin{LARGE}
     \titleofthesis\\[2cm]
+    \end{LARGE}
     Master's Thesis\\[3cm]
   \end{center}
 
@@ -187,7 +189,9 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
   \begin{center}
     \codeofprogram\\[0cm]
     \nameofauthor ~\codeofstudent\\[2cm]
+    \begin{LARGE}
     \estoniantitleofthesis\\[2cm]
+    \end{LARGE}
     Magistritöö\\[3cm]
   \end{center}
 
