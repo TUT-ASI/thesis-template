@@ -17,9 +17,7 @@
 % or simply send an email to siavoosh.azad@ttu.ee
 
 \ProvidesClass{MasterThesisTUT}[7/9/2018 custom thesis class]
-% \documentclass[a4paper, 12pt]{article}
 \LoadClass[a4paper, 12pt]{article}
-% TODO ↑ which one?
 
 \usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=3cm, right=3cm,
 % ↓ Geometry of the page
@@ -60,9 +58,7 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 
 \usepackage{array}
 \usepackage{tabularx}
-% \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
-% TODO ↑ which one?
 
 \setlength{\tabcolsep}{5 pt}
 % ↓ for setting the line spacing inside a table to 6pt before and
