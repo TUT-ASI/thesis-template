@@ -35,10 +35,8 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 
 \usepackage{titlesec} % for editing titles
 
-\usepackage[utf8]{inputenc}     % UTF8 decoding
-\usepackage[T1]{fontenc}        % for using Estonian and Russian letters
-% \usepackage[T1, T2A]{fontenc} % for using Estonian and Russian letters
-% TODO ↑ so which one?
+\usepackage[utf8]{inputenc} % UTF8 decoding
+\usepackage[T1]{fontenc}    % for using Estonian and Russian letters
 
 \usepackage[titletoc, title]{appendix}
 
