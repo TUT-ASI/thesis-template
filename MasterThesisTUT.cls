@@ -107,6 +107,8 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 \newcommand*{\studentcode}[1]{\def\codeofstudent{#1}}
 \newcommand*{\school}[1]{\def\school{#1}}
 \newcommand*{\department}[1]{\def\department{#1}}
+\newcommand*{\estonianschool}[1]{\def\estonianschool{#1}}
+\newcommand*{\estoniandepartment}[1]{\def\estoniandepartment{#1}}
 
 % ------------------------------
 % Title Page English
@@ -162,8 +164,8 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
     \textsc{\begin{Large} % uppercase big text
         Tallinna tehnikaülikool\\
       \end{Large} }
-    Infotehnoloogia teaduskond\\ % TODO department should be configurable
-    Arvutitehnika instituut
+    \estonianschool\\
+    \estoniandepartment
   }
 
   \vspace*{7 cm} % space before text and start of the page
