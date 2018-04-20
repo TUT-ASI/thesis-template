@@ -39,6 +39,12 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 \usepackage[T1]{fontenc}    % for using Estonian and Russian letters
 
 \usepackage[titletoc, title]{appendix}
+\usepackage{totcount} % total number of chapters/figures/tables
+\regtotcounter{table}
+\regtotcounter{figure}
+\regtotcounter{section}
+\addtocounter{section}{-1} % Introduction
+\addtocounter{section}{-1} % Summary
 
 % ↓ Used for captioning tables and figures, set font to 10, Adds
 % ↓ period to the end of table or figure
@@ -110,6 +116,17 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 \newcommand*{\department}[1]{\def\department{#1}}
 \newcommand*{\estonianschool}[1]{\def\estonianschool{#1}}
 \newcommand*{\estoniandepartment}[1]{\def\estoniandepartment{#1}}
+
+\newcommand*{\totalchapters}[1]{\total{section}
+  \ifnum\totvalue{section}=1{chapter}\else{chapters}\fi
+}
+\newcommand*{\totalfigures}[1]{\total{figure}
+  \ifnum\totvalue{figure}=1{figure}\else{figures}\fi
+}
+\newcommand*{\totaltables}[1]{\total{table}
+  \ifnum\totvalue{table}=1{table}\else{tables}\fi
+}
+% No need to plurify in Estonian! Winner winner, chicken dinner.
 
 % ------------------------------
 % Title Page English
