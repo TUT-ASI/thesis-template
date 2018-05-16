@@ -20,3 +20,6 @@ neighboring rights to this template.
 If you want to contribute or want to report bugs, please
 [file an issue](https://github.com/TUT-ASI/thesis-template/issues)
 on GitHub or simply send an email to `siavoosh.azad@ttu.ee`.
+
+Read-only version of this template is also
+[available on overleaf](https://www.overleaf.com/read/wjghvfmyhwvc).
