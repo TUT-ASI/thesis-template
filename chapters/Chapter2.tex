@@ -63,9 +63,9 @@ Example of citation \cite{urlSource}.
     \hline
     \textbf{Column 1} & \textbf{Column 2}\\ \hline
     One row     & Some text\\ \hline
-    Another row & Multi-line cell
+    Another row & single line cell \\   
 
-                  More text here\\ \hline
+                & More text here\\ \hline
 
     Foo & Text here\\ \hhline{-~}
     Bar & (more more)\\ \hhline{-~}
@@ -75,6 +75,21 @@ Example of citation \cite{urlSource}.
 
 \newpage
 \subsection{Fancy Table (example)}
+
+\begin{table}[!h]
+  \caption{This is a table caption}
+  \centering
+  \begin{tabular}{|L{5.1cm}|L{9.1cm}|}
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Multi-Column Example}}\\\hline
+    \cellcolor{blue!25} \textbf{Cell color example}     & Some text\\ \hline
+    \multirow{2}{*}{\textbf{Multi-row Example}} & single-line cell \\
+				                 		& More text here\\ \hline
+    Foo & Text here\\ \hhline{-~}
+    Bar & (more more)\\ \hhline{-~}
+    Baz & \\ \hline
+  \end{tabular}
+\end{table}
 
 % TODO take some example from Siavoosh
 
