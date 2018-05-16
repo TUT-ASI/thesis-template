@@ -125,7 +125,7 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 }
 % No need to plurify in Estonian! Winner winner, kana dinner.
 
- 
+
 % ------------------------------
 % Title Page English
 % ------------------------------
