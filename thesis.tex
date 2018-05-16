@@ -1,5 +1,7 @@
 \documentclass{MasterThesisTUT}
 
+\newcommand{\ThesisInEnglish}{true}	% set to true if in English
+\usepackage{ifthen}
 % --------------------------------------
 % Some Guidelines for Using the template
 % --------------------------------------
@@ -64,10 +66,13 @@
 % ----------------------------- DECLARATION -------------------------------
 \input{chapters/Declaration.tex}
 
+\ifthenelse{\equal{\ThesisInEnglish}{true}}{ 
 % ----------------------------- ABSTRACT ----------------------------------
 \input{chapters/Abstract-eng.tex}
+}{
 % ----------------------------- ABSTRACT (In Estonian) --------------------
 \input{chapters/Abstract-est.tex}
+}
 % ----------------------------- ABBREVIATIONS -----------------------------
 \input{chapters/Abbreviations.tex}
 
