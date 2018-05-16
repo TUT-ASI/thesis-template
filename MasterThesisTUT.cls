@@ -16,7 +16,7 @@
 %     https://github.com/TUT-ASI/thesis-template/issues
 % or simply send an email to siavoosh.azad@ttu.ee
 
-\ProvidesClass{MasterThesisTUT}[7/9/2018 custom thesis class]
+\ProvidesClass{MasterThesisTUT}[Master's Thesis Class v1.0.0]
 \LoadClass[a4paper, 12pt]{article}
 
 \usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=3cm, right=3cm,
