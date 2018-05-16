@@ -47,7 +47,8 @@ marginparsep = 0pt, marginparwidth = 0pt, includefoot, includehead]{geometry}
 % ↓ period to the end of table or figure
 \usepackage[font=footnotesize, labelsep=period, textformat= period]{caption}
 
-
+\usepackage{hyperref}       % for links (if needed)
+\hypersetup{colorlinks,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}
 % -------------------------------------------
 % Formatting the Tables
 % -------------------------------------------
