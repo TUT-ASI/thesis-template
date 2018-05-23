@@ -35,6 +35,23 @@
 \usepackage[linesnumbered]{algorithm2e}
 \SetAlFnt{\small\bfseries\ttfamily}
 
+% Bibliography management through Biblatex. *.bib database created with tools such as Mendeley.
+% biblatex author year style: https://tex.stackexchange.com/questions/261430/biblatex-author-year-citations
+\usepackage{csquotes}
+\usepackage[backend=biber, sorting=none, style=ieee]{biblatex}	% authoryear, 
+\renewcommand*{\nameyeardelim}{\addcomma\addspace}	% separate author year by comma for \parencite{}
+\addbibresource{literature.bib}
+% \cite -> author year ; \textcite{key} -> author (year); \parencite{key} -> (author year)
+
+% Glossaries Management: https://en.wikibooks.org/wiki/LaTeX/Glossary
+% https://tex.stackexchange.com/questions/300049/remove-empty-pages-before-glossary/300058
+%\usepackage[acronym, nonumberlist, toc]{glossaries}
+\usepackage[nopostdot, toc, nonumberlist, acronym, section=section]{glossaries}
+\renewcommand*{\glsclearpage}{}	% to prevent empty page before glossary
+\makenoidxglossaries
+% Load Glossary file
+\loadglsentries{preliminary/glossaries}
+
 % -------------------------------
 % ⚠ Edit your information here! ⚠
 % -------------------------------
@@ -64,17 +81,20 @@
 \maketitlepageeesti
 
 % ----------------------------- DECLARATION -------------------------------
-\input{chapters/Declaration.tex}
+\input{preliminary/Declaration.tex}
 
-\ifthenelse{\equal{\ThesisInEnglish}{true}}{ 
+\ifthenelse{\equal{\ThesisInEnglish}{true}}{
 % ----------------------------- ABSTRACT ----------------------------------
-\input{chapters/Abstract-eng.tex}
+\input{preliminary/Abstract-eng.tex}
 }{
 % ----------------------------- ABSTRACT (In Estonian) --------------------
-\input{chapters/Abstract-est.tex}
+\input{preliminary/Abstract-est.tex}
 }
 % ----------------------------- ABBREVIATIONS -----------------------------
-\input{chapters/Abbreviations.tex}
+{\titleformat{\section}[display]{\Large\bfseries\centering}{}{}{}
+\printnoidxglossary[title={List of Terms}]
+\printnoidxglossary[type=acronym, title={List of Abbreviations}]
+}
 
 % ----------------------------- TABLE OF CONTENTS -------------------------
 \singlespacing
@@ -88,20 +108,22 @@
 \pagebreak
 \onehalfspacing
 % ----------------------------- INTRODUCTION ------------------------------
-\input{chapters/Introduction.tex}
+\input{introduction/Introduction.tex}
 % ----------------------------- CHAPTERS ----------------------------------
-\input{chapters/Chapter1.tex}
+\input{chExamples1/Chapter1.tex}
 
-\input{chapters/Chapter2.tex}
+\input{chExamples2/Chapter2.tex}
 
 % ----------------------------- CONCLUSION --------------------------------
-\input{chapters/Summary.tex}
+\input{summary/Summary.tex}
 
 % ----------------------------- BIBLIOGRAPHY ------------------------------
-\bibliographystyle{ieeetr}
+% *** Set References
+% https://www.sharelatex.com/learn/Bibliography_management_with_bibtex
 \footnotesize
 \setstretch{0}
-\bibliography{literature} % link to bibtex file (literature.bib)
+%\normalem	% surpress underlines in bibliography
+\printbibliography[heading=bibintoc, title={References}]
 
 \label{EndOfMainPart}
 \newpage
@@ -119,8 +141,8 @@
   \titleformat{\section}{\bfseries\Large}{Appendix \thesection}{0.2em}{}
   \renewcommand{\thesection}{\arabic{section} --}
 
-  \input{chapters/Appendix1.tex}
-  \input{chapters/Appendix2.tex}
+  \input{appendix/Appendix1.tex}
+  \input{appendix/Appendix2.tex}
 \end{appendices}
 
 \addtocounter{section}{-1} % Introduction

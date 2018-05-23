@@ -1,0 +1,71 @@
+% Discussion about forming glossary entry, singular and plural, first and second appearance 
+%	https://tex.stackexchange.com/questions/128396/defining-plural-form-for-glossaries-entries
+%	call with: \gls{key} & \glspl{key}
+% Wikibooks Page: https://en.wikibooks.org/wiki/LaTeX/Glossary
+% CTAN source: https://ctan.org/pkg/glossaries?lang=en
+
+%%%%% EXAMPLE GLOSSARY
+%\newglossaryentry{LED}{%
+%  name={LED},							<-- Glossary appearance
+%  description={light emitting diode},				<-- Glossary description
+%  first={\glsentrydesc{LED} (\glsentrytext{LED})},	<-- First appearance normal
+%  firstplural={\glsentrydescplural{LED} (\glsentryplural{LED})}	<-- First appearance plural
+%  text={LED},								<-- tex appearance 2nd ... time, if not available name will be it
+%  plural={LEDs},							<-- plural appearance after 1st 
+%  descriptionplural={light emitting diodes}		<-- Not sure about this! 		
+%} 
+%%%%% EXAMPLE ACRONYM
+%\newacronym[plural=cM,firstplural=centiMorgans (cM)]{cM}{cM}{centiMorgan}
+
+\newglossaryentry{sdr}{%
+	name={Software Defined Radio (SDR)},
+	description={Software defined radios are general purpose radio solutions capable to adapt to the current 
+	situation. Therefore, important parameters (e.g. coding scheme of the data-stream) for transmitter and receiver can be 
+	configured by the software and/or programmable hardware.},
+	first={Software Defined Radio (SDR)},
+	firstplural={Software Defined Radios (SDR)},
+	text={SDR},
+	plural={SDRs}
+	}
+\newglossaryentry{glonass}{%
+	name={Globalnaya Navigatsionnaya Sputnikovaya Sistema (GLONASS)},
+	description={Satellite based navigation system operated by Roscosmos.},
+	first={Global Navigation Satellite System (GLONASS)},
+	text={GLONASS}
+	}
+\newglossaryentry{gnssr}{%
+	name={Global Navigation Satellite System-Reflectometry (GNSS-R)},
+	description={Radiometric measurement based on forward or back-scattered radio waves from global 
+	navigational satellite systems.},
+	first={Global Navigation Satellite System-Reflectometry (GNSS-R)},
+	text={GNSS-R}
+	}
+\newglossaryentry{zenit}{%
+	name={zenit},
+	description={Straight above, normal vector opposite of Gravity.},
+	first={zenit},
+	text={zenit}
+	}
+\newglossaryentry{nadir}{%
+	name={nadir},
+	description={Straight below, normal vector direction of Gravity.},
+	first={nadir},
+	text={nadir}
+	}
+\newglossaryentry{leo}{%
+	name={Low Earth Orbit (LEO)},
+	description={Satellite orbit at 200-2,000\,km altitude.},
+	first={Low Earth Orbit (LEO)},
+	text={LEO}
+	}
+\newglossaryentry{meo}{%
+	name={Medium Earth Orbit (MEO)},
+	description={Satellite orbit at 2,000-35,786\,km altitude.},
+	first={Medium Earth Orbit (MEO)},
+	text={MEO}
+	}
+	
+	
+\newacronym{cots}{COTS}{Commercial off-the-shelf}
+\newacronym[plural=DDMs, firstplural=Delay-Doppler-Maps (DDM)]{ddm}{DDM}{Delay-Doppler-Map}
+\newacronym[plural=FFTs, firstplural=Fast Fourier Transforms (FFT)]{fft}{FFT}{Fast Fourier Transform}
