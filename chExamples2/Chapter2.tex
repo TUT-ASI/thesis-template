@@ -49,10 +49,19 @@ Unordered list example:
   \end{itemize}
 \end{itemize}
 
-\subsection{Citation (example)}
+
+\subsection{Citation with Bib\LaTeX \& Biber}
+To manage the references aka. bibliography the \LaTeX package \emph{biblatex} is used. Furthermore, the backend biber is used to have the full control of style and further parameters. This can be achieved by calling \textbackslash usepackage[backend=biber, sorting=none, style=ieee]\{biblatex\}. The style can be changed to any supported one by biblatex. The parameter sorting \emph{none} arranges the reference in the first appearance order. The actual bibliography is loaded by calling \emph{\textbackslash addbibresource\{literature.bib\}}.\par
+For studies outside of the IEEE domain the Author/Year representation might be more common and can be activated by setting the style to \emph{authoryear}. Therefore, a delimiter has to be set for correct representation which can be achieved with the following command. \emph{\textbackslash renewcommand*\{\textbackslash nameyeardelim\}\{\textbackslash addcomma\textbackslash addspace\}}.\par
+To successfully generate the bibliography \LaTeX has to be ran multiple times including one bibtex run between. The compile sequence is as follow: \LaTeX - Biblatex - \LaTeX - \LaTeX \par
+For managing the references, tools such as Mendeley are strongly recommended. Reference management tools allowing one to manually add or download references from an online repository and to manage them. Furthermore, the references can be managed in groups and backed-up into the cloud. Once done, a bib file can be generated which then is loaded as described above.
+
+
+\subsubsection{Citation (example)}
 
 Example of citation \cite{limewiki}.\\
 As shown by \textcite{Zavorotny2013} .... Later on, it was shown in a experiment \parencite{Hobiger2014} that ...
+
 
 \subsection{Terms \& Abbreviations}
 \gls{sdr}, \gls{sdr}, \glspl{sdr}, \glsreset{sdr}\glspl{sdr}\\
@@ -139,6 +148,23 @@ Figure \ref{fig:logo2} presents an example of a figure with long multi-line capt
 \end{figure}
 
 Figure \ref{fig:logo3} presents an example of a multi-part figure.
+
+
+
+
+
+\subsection{Minipages, Figures, Captions \& Footnotes}
+
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=0.5\textwidth]{example-image-duck}}
+\caption{Example of a figure caption.}
+\label{fig}
+\end{figure}
+
+
+
+
+
 
 \subsection{Program code}
 
