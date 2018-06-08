@@ -138,7 +138,7 @@ Figure \ref{fig:logo2} presents an example of a figure with long multi-line capt
     \includegraphics[width=\textwidth]{chExamples2/figures/TTU_peamine_logo_ENG_print}
     \caption{}
   \end{subfigure}
-  \qquad
+  \hfill
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{chExamples2/figures/ttu_peamine_logo_eng_must-valge_negatiivis}
     \caption{}
@@ -150,19 +150,57 @@ Figure \ref{fig:logo2} presents an example of a figure with long multi-line capt
 Figure \ref{fig:logo3} presents an example of a multi-part figure.
 
 
-
-
-
-\subsection{Minipages, Figures, Captions \& Footnotes}
-
-\begin{figure}[htbp]
-\centerline{\includegraphics[width=0.5\textwidth]{example-image-duck}}
-\caption{Example of a figure caption.}
-\label{fig}
+\FloatBarrier
+\subsection{Figures, Captions \& Footnotes}
+\subsubsection{Figures with Minipages}
+\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.4\textwidth}
+		\includegraphics[width=\textwidth]{example-image-duck}
+		\caption{Flower one.}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.4\textwidth}
+		\includegraphics[width=\textwidth]{example-image-duck}
+		\caption[Flower two, caption in list of figures]{Flower two, caption under figure}
+	\end{minipage}
 \end{figure}
 
-
-
+\subsubsection{Figures with SubFigures}
+% Example source: https://tex.stackexchange.com/questions/196481/problem-on-subfigure-2x2
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.475\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{example-image-duck}
+		\caption{{\small Duck 1}}
+		\label{fig:duck1}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.475\textwidth}  
+		\centering 
+		\includegraphics[width=\textwidth]{example-image-duck}
+		\caption{{\small Duck 2}}
+		\label{fig:duck2}
+	\end{subfigure}
+	\vskip\baselineskip
+	\begin{subfigure}[b]{0.475\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{example-image-duck}
+		\caption{{\small Duck 3}}
+		\label{fig:duck3}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.475\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{example-image-duck}
+		\caption{{\small Duck 4}}
+		\label{fig:duck4}
+	\end{subfigure}
+	\footcaption{Duck Test, figure caption text}
+	\label{fig:ducks}
+\end{figure}
+\footnotetext{\href{https://www.google.com}{www.google.com is great}, last visited \today}
 
 
 

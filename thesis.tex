@@ -17,6 +17,9 @@
 \usepackage{graphicx}       % Figures inside text
 \usepackage{url}            % For using URLs
 \usepackage{blindtext}      % Stubs
+\usepackage{duckuments}% image Stubs
+\usepackage{placeins}	% setting FloatBarriers to force flushing of floating objects
+\usepackage{float}		% sharp placement with H
 \usepackage{color}          % used for \textcolor
 \usepackage{multirow}       % for multi-row cells in table
 \usepackage{hhline}         % for customizing the horizontal lines in tables
@@ -24,6 +27,9 @@
 \usepackage{xfrac}          % for some fancy fraction numbers used in the document
 \usepackage{subcaption}     % used for figures with sub figures a,b, etc
 \usepackage[iso]{datetime}  % current date (note: uses ISO 8601 format)
+
+% footnotes in captions: https://tex.stackexchange.com/questions/154423/footnote-numbers-in-the-list-of-figures
+\newcommand{\footcaption}[1]{\caption[#1]{#1\footnotemark}}
 
 
 % use the following package if you need pseudo-code
