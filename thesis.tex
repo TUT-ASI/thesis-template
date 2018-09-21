@@ -1,31 +1,31 @@
-\documentclass{MasterThesisTUT}
-
-\newcommand{\ThesisInEnglish}{true}	% set to true if in English
-\usepackage{ifthen}
+\documentclass{TalTechTemplate}
 % --------------------------------------
 % Some Guidelines for Using the template
 % --------------------------------------
-% 1. DO NOT MODIFY THE CLASS FILE!
-% 2. DO NOT MODIFY THE CLASS FILE!
-% 3. Try to keep the document modular (use `chapters` and `figures` folders)
-% ----------------------------------
+% 1. DO NOT MODIFY THE CLASS FILE (TalTechTemplate.cls)!
+% 2. Try to keep the document modular (use `chapters` and other folders)
+% --------------------------------------
+%
 % Recommendations:
 % - subfigure package is deprecated! Please use subcaption package instead.
 % - Use hhline instead of cline package
 
 
-% some useful packages, not necessary for the template:
-\usepackage[table]{xcolor}
-\usepackage{graphicx}       % Figures inside text
-\usepackage{url}            % For using URLs
-\usepackage{blindtext}      % Stubs
+% Some useful packages, not necessary for the template:
+
+\usepackage{blindtext}      % stubs
+\usepackage{url}            % for using URLs
 \usepackage{color}          % used for \textcolor
+
+\usepackage[table]{xcolor}  % colorful tables
 \usepackage{multirow}       % for multi-row cells in table
 \usepackage{hhline}         % for customizing the horizontal lines in tables
 \usepackage{tcolorbox}      % for gray text boxes on pages 17 and 19
-\usepackage{xfrac}          % for some fancy fraction numbers used in the document
-\usepackage{subcaption}     % used for figures with sub figures a,b, etc
-\usepackage[iso]{datetime}  % current date (note: uses ISO 8601 format)
+
+\usepackage{graphicx}       % figures inside text
+\usepackage{subcaption}     % used for figures with sub figures
+
+\usepackage{xfrac}          % for some fancy fraction numbers
 
 
 % use the following package if you need pseudo-code
@@ -35,87 +35,49 @@
 \usepackage[linesnumbered]{algorithm2e}
 \SetAlFnt{\small\bfseries\ttfamily}
 
-% Bibliography management through Biblatex. *.bib database created with tools such as Mendeley.
-% biblatex author year style: https://tex.stackexchange.com/questions/261430/biblatex-author-year-citations
+
+% Bibliography management through Biblatex. *.bib database created
+% with tools such as Mendeley.
+% biblatex author year style:
+% https://tex.stackexchange.com/questions/261430/biblatex-author-year-citations
 \usepackage{csquotes}
-\usepackage[backend=biber, sorting=none, style=ieee]{biblatex}	% authoryear, 
-\renewcommand*{\nameyeardelim}{\addcomma\addspace}	% separate author year by comma for \parencite{}
+\usepackage[backend=biber,
+            sorting=none,
+            style=ieee,
+            ]{biblatex} % authoryear,
+% separate author year by comma for \parencite{}
+\renewcommand*{\nameyeardelim}{\addcomma\addspace}
 \addbibresource{literature.bib}
 % \cite -> author year ; \textcite{key} -> author (year); \parencite{key} -> (author year)
 
 % Glossaries Management: https://en.wikibooks.org/wiki/LaTeX/Glossary
 % https://tex.stackexchange.com/questions/300049/remove-empty-pages-before-glossary/300058
-%\usepackage[acronym, nonumberlist, toc]{glossaries}
+
+
 \usepackage[nopostdot, toc, nonumberlist, acronym, section=section]{glossaries}
-\renewcommand*{\glsclearpage}{}	% to prevent empty page before glossary
+\renewcommand*{\glsclearpage}{} % to prevent empty page before glossary
 \makenoidxglossaries
 % Load Glossary file
 \loadglsentries{preliminary/glossaries}
 
-% -------------------------------
-% ⚠ Edit your information here! ⚠
-% -------------------------------
-\authorname{[First name Middle name Last name]} % Name of the author
-\thesistitle{[Title of the Thesis]}         % Title of Thesis (English)
-\estonianthesistitle{[Lõputöö pealkiri]}    % Title of Thesis (Estonian)
-\supervisorname{[Supervisor's Name]}        % Name of the supervisor
-\supervisortitle{[Supervisor's Title]}      % Supervisor's title
-\cosupervisorname{[Co-supervisor's Name]}   % Name of the co-supervisor
-\cosupervisortitle{[Co-Supervisor's Title]} % Co-supervisor's title
-\programcode{[IAY70LT]}
-\studentcode{[1234ABCD]}
-\school{School of Information Technologies}
-\department{Department of Computer Systems}
-\estonianschool{Infotehnoloogia teaduskond}
-\estoniandepartment{Arvutisüsteemide instituut}
+
+\input{definitions.tex}
 
 \begin{document}
 \sloppy % to make sure mbox does not go over the limit
 
-% Document structure:
+\prologue % title pages, abstracts, etc.
 
-% ----------------------------- TITLE PAGE --------------------------------
-\maketitlepage
-
-% ----------------------------- TITLE PAGE (EST) --------------------------
-\maketitlepageeesti
-
-% ----------------------------- DECLARATION -------------------------------
-\input{preliminary/Declaration.tex}
-
-\ifthenelse{\equal{\ThesisInEnglish}{true}}{
-% ----------------------------- ABSTRACT ----------------------------------
-\input{preliminary/Abstract-eng.tex}
-}{
-% ----------------------------- ABSTRACT (In Estonian) --------------------
-\input{preliminary/Abstract-est.tex}
-}
-% ----------------------------- ABBREVIATIONS -----------------------------
-{\titleformat{\section}[display]{\Large\bfseries\centering}{}{}{}
-\printnoidxglossary[title={List of Terms}]
-\printnoidxglossary[type=acronym, title={List of Abbreviations}]
-}
-
-% ----------------------------- TABLE OF CONTENTS -------------------------
-\singlespacing
-\tableofcontents
-\newpage
-% ----------------------------- LIST OF FIGURES ---------------------------
-\listoffigures
-\pagebreak
-% ----------------------------- LIST OF TABLES ----------------------------
-\listoftables
-\pagebreak
-\onehalfspacing
 % ----------------------------- INTRODUCTION ------------------------------
-\input{introduction/Introduction.tex}
+\input{introduction/introduction.tex}
+
 % ----------------------------- CHAPTERS ----------------------------------
-\input{chExamples1/Chapter1.tex}
+\input{chExamples1/chapter1.tex}
 
-\input{chExamples2/Chapter2.tex}
+\input{chExamples2/chapter2.tex}
 
-% ----------------------------- CONCLUSION --------------------------------
-\input{summary/Summary.tex}
+% ----------------------------- SUMMARY -----------------------------------
+\input{summary/summary.tex}
 
 % ----------------------------- BIBLIOGRAPHY ------------------------------
 % *** Set References
@@ -125,27 +87,14 @@
 %\normalem	% surpress underlines in bibliography
 \printbibliography[heading=bibintoc, title={References}]
 
-\label{EndOfMainPart}
-\newpage
-
-%todo: find if we can somehow move this to the preamble!
-\let\svaddcontentsline\addcontentsline
-\renewcommand\addcontentsline[3]{%
-  \ifthenelse{\equal{#1}{lof}}{}%
-  {\ifthenelse{\equal{#1}{lot}}{}{\svaddcontentsline{#1}{#2}{#3}}}}
-
-
-\begin{appendices}
- \setcounter{table}{0}
- \setcounter{figure}{0}
-  \titleformat{\section}{\bfseries\Large}{Appendix \thesection}{0.2em}{}
-  \renewcommand{\thesection}{\arabic{section} --}
-
-  \input{appendix/Appendix1.tex}
-  \input{appendix/Appendix2.tex}
-\end{appendices}
-
-\addtocounter{section}{-1} % Introduction
-\addtocounter{section}{-1} % Summary
-
+\epilogue{
+  \input{appendix/appendix1.tex}
+  \input{appendix/appendix2.tex}
+}
 \end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
