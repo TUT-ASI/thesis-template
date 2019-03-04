@@ -16,7 +16,7 @@
 %     https://github.com/TUT-ASI/thesis-template/issues
 % or simply send an email to siavoosh.azad@ttu.ee
 
-\ProvidesClass{TalTechTemplate}[2018/05/16 TalTech Generic Template v1.0.1]
+\ProvidesClass{TalTechTemplate}[2018/05/16 TalTech Generic Template v1.0.2]
 \LoadClass[a4paper, 12pt]{article}
 
 % For homeworks and other reports
