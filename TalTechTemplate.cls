@@ -125,10 +125,6 @@ marginparsep = 0pt, marginparwidth = 0pt,
   \IfLanguageName{estonian}{Tabelite loetelu}{}%
 }
 
-% TODO
-% \IfLanguageName{english}{References}{}%
-% \IfLanguageName{estonian}{Kasutatud kirjandus}{}%
-
 \titlespacing*{\section}{0pt}{60pt}{6pt}
 \titlespacing*{\subsection}{0pt}{12pt}{0pt}
 \titlespacing*{\subsubsection}{0pt}{12pt}{0pt}
@@ -318,8 +314,15 @@ marginparsep = 0pt, marginparwidth = 0pt,
 }
 
 
-% Epilogue (includes many compulsory pages)
+% Epilogue (bibliography and appendices)
 \newcommand*{\epilogue}[1]{
+  % Bibliography
+  \setstretch{0} % tighter spacing between references
+  \printbibliography[heading=bibintoc, title={%
+    \IfLanguageName{english}{References}{}%
+    \IfLanguageName{estonian}{Kasutatud kirjandus}{}%
+  }]
+
   \label{EndOfMainPart}
   \addtocounter{section}{-1} % Introduction
   \addtocounter{section}{-1} % Summary
@@ -330,6 +333,7 @@ marginparsep = 0pt, marginparwidth = 0pt,
     \ifthenelse{\equal{##1}{lof}}{}%
     {\ifthenelse{\equal{##1}{lot}}{}{\svaddcontentsline{##1}{##2}{##3}}}}
 
+  % Appendices
   \begin{appendices}
     % save and reset counters
     \newcounter{maintable}
