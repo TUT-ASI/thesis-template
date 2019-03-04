@@ -283,11 +283,11 @@ marginparsep = 0pt, marginparwidth = 0pt,
   % ----------------------------- DECLARATION -------------------------------
   \makedeclaration
 
-  % ----------------------------- ABSTRACT (In Estonian) --------------------
-  \input{preliminary/abstract-est.tex}
-
   % ----------------------------- ABSTRACT ----------------------------------
   \input{preliminary/abstract-eng.tex}
+
+  % ----------------------------- ABSTRACT (EST) ----------------------------
+  \input{preliminary/abstract-est.tex}
 
   % ----------------------------- ABBREVIATIONS -----------------------------
   {\titleformat{\section}[display]{\Large\bfseries\centering}{}{}{}
