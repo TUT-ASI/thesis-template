@@ -15,6 +15,9 @@
 
 \usepackage{blindtext}      % stubs
 \usepackage{url}            % for using URLs
+\usepackage{duckuments}     % image Stubs
+\usepackage{placeins}       % setting FloatBarriers to force flushing of floating objects
+\usepackage{float}          % sharp placement with H
 \usepackage{color}          % used for \textcolor
 
 \usepackage[table]{xcolor}  % colorful tables
@@ -26,6 +29,10 @@
 \usepackage{subcaption}     % used for figures with sub figures
 
 \usepackage{xfrac}          % for some fancy fraction numbers
+\usepackage[inter-unit-product = \cdot]{siunitx} % correctly formatted SI units with defined sign between units
+
+% footnotes in captions: https://tex.stackexchange.com/questions/154423/footnote-numbers-in-the-list-of-figures
+\newcommand{\footcaption}[1]{\caption[#1]{#1\footnotemark}}
 
 
 % use the following package if you need pseudo-code
