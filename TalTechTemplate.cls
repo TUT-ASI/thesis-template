@@ -193,15 +193,11 @@ marginparsep = 0pt, marginparwidth = 0pt,
 
   \chead{ % centered
     \IfLanguageName{english}{
-      TalTech\\
-      \medskip%
       \uppercase{Tallinn University of Technology}\\
       \@school\\
       \@department%
     }{}%
     \IfLanguageName{estonian}{
-      TalTech\\
-      \medskip%
       \uppercase{Tallinna tehnikaülikool}\\
       \@schoolEst\\
       \@departmentEst%
