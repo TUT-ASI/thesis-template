@@ -8,7 +8,7 @@ Thesis template by:
     Priit Ruberg 2015
     Hannes Kinks 2016
     Siavoosh Payandeh Azad 2018
-    Aleks-Daniel Jakimenko-Aleksejev 2018
+    Aleks-Daniel Jakimenko-Aleksejev 2018-2019
 
 This template is in public domain.
 

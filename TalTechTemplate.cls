@@ -3,7 +3,7 @@
 %     Priit Ruberg 2015
 %     Hannes Kinks 2016
 %     Siavoosh Payandeh Azad 2018
-%     Aleks-Daniel Jakimenko-Aleksejev 2018
+%     Aleks-Daniel Jakimenko-Aleksejev 2018-2019
 %
 % This template is in public domain.
 %
@@ -16,7 +16,7 @@
 %     https://github.com/TUT-ASI/thesis-template/issues
 % or simply send an email to siavoosh.azad@ttu.ee
 
-\ProvidesClass{TalTechTemplate}[2018/05/16 TalTech Generic Template v1.0.2]
+\ProvidesClass{TalTechTemplate}[2019/03/05 TalTech Generic Template v1.0.2]
 \LoadClass[a4paper, 12pt]{article}
 
 % For homeworks and other reports
