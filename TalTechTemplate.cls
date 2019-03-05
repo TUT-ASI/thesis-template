@@ -74,15 +74,6 @@ marginparsep = 0pt, marginparwidth = 0pt,
 % period to the end of table or figure
 \usepackage[font=footnotesize, labelsep=period, textformat=period]{caption}
 
-% Better link colors
-\usepackage{hyperref}
-\hypersetup{
-  colorlinks,
-  citecolor=black, filecolor=black,
-  linkcolor=black, urlcolor=black,
-}
-
-
 % Tables
 
 % Making the font in tables 11pt
@@ -134,13 +125,23 @@ marginparsep = 0pt, marginparwidth = 0pt,
 % Headers and footers
 \usepackage{fancyhdr}
 
-% Resetting footnote numbering in each page
-\usepackage[perpage]{footmisc}
-
 % Spacing of text
 \usepackage{setspace}
 \onehalfspacing % 1.5 spacing between lines of text
 
+% Resetting footnote numbering in each page
+\usepackage{perpage}
+\MakePerPage[1]{footnote}
+
+% Better link colors
+% Make sure that hyperref is the last used package (it conflicts with
+% many other packages)
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks,
+  citecolor=black, filecolor=black,
+  linkcolor=black, urlcolor=black,
+}
 
 % Redefine section so that it would start every time on a new page
 \let\stdsection\section
