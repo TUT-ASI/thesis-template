@@ -286,9 +286,7 @@ marginparsep = 0pt, marginparwidth = 0pt,
 
   % ----------------------------- ABBREVIATIONS -----------------------------
   {\titleformat{\section}[display]{\Large\bfseries\centering}{}{}{}
-    % TODO
-    \printnoidxglossary[title={List of Terms}]
-    \printnoidxglossary[type=acronym, title={%
+    \printnoidxglossary[title={%
       \IfLanguageName{english}{List of abbreviations and terms}{}%
       \IfLanguageName{estonian}{Lühendite ja mõistete sõnastik}{}%
     }]}
