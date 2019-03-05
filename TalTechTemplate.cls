@@ -49,7 +49,7 @@ marginparsep = 0pt, marginparwidth = 0pt,
 %       with \PassOptionsToPackage{someotherlang}{babel}
 
 % Glossaries
-\usepackage[nopostdot, toc, nonumberlist, section=section]{glossaries}
+\usepackage[nopostdot, nonumberlist, section=section]{glossaries}
 \renewcommand*{\glsclearpage}{} % to prevent empty page before glossary
 \makenoidxglossaries
 
