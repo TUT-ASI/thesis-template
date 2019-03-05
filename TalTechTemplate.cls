@@ -326,8 +326,8 @@ marginparsep = 0pt, marginparwidth = 0pt,
   }]
 
   \label{EndOfMainPart}
-  \addtocounter{section}{-1} % Introduction
-  \addtocounter{section}{-1} % Summary
+  \@ifundefined{r@Introduction}{}{\addtocounter{section}{-1}}
+  \@ifundefined{r@Summary}     {}{\addtocounter{section}{-1}}
   \newpage
 
   \let\svaddcontentsline\addcontentsline
