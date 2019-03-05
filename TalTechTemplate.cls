@@ -301,11 +301,15 @@ marginparsep = 0pt, marginparwidth = 0pt,
   \newpage
 
   % ----------------------------- LIST OF FIGURES ---------------------------
-  \listoffigures
+  \ifnum \totvalue{figure} > 0 {%
+    \listoffigures%
+  }\fi
   \pagebreak
 
   % ----------------------------- LIST OF TABLES ----------------------------
-  \listoftables
+  \ifnum \totvalue{table} > 0 {%
+    \listoftables%
+  }\fi
   \pagebreak
   \onehalfspacing
 }
