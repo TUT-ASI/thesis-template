@@ -74,7 +74,12 @@
 \begin{document}
 \sloppy % to make sure mbox does not go over the limit
 
-\prologue % title pages, abstracts, etc.
+\prologue{ % title pages, abstracts, etc.
+  % English  abstract (optional for Estonian works)
+  \input{preliminary/abstract-eng.tex}
+  % Estonian abstract (optional for English  works)
+  \input{preliminary/abstract-est.tex}
+}
 
 % ----------------------------- INTRODUCTION ------------------------------
 \input{introduction/introduction.tex}

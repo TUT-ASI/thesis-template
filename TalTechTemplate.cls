@@ -28,11 +28,6 @@
 % Master's thesis
 \DeclareOption{master}{}
 
-% Optional Estonian abstract for English  works
-\DeclareOption{estabstract}{}
-% Optional English  abstract for Estonian works
-\DeclareOption{engabstract}{}
-
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 
@@ -165,6 +160,8 @@ marginparsep = 0pt, marginparwidth = 0pt,
 \newcommand*\department[1]{\def\@department{#1}}
 \newcommand*\departmentEst[1]{\def\@departmentEst{#1}}
 
+\newcommand*\abstractpage[1]{\def\@abstractpage{#1}}
+\newcommand*\abstractpageEst[1]{\def\@abstractpageEst{#1}}
 
 % Totals
 % (No need to plurify in Estonian! Winner winner, kanadinner.)
@@ -269,7 +266,7 @@ marginparsep = 0pt, marginparwidth = 0pt,
 
 
 % Prologue (includes many compulsory pages)
-\newcommand*{\prologue}{
+\newcommand*{\prologue}[1]{
   \selectlanguage{\ \@mainlanguage}
 
   % ----------------------------- TITLE PAGE --------------------------------
@@ -284,10 +281,8 @@ marginparsep = 0pt, marginparwidth = 0pt,
   \makedeclaration
 
   % ----------------------------- ABSTRACT ----------------------------------
-  \input{preliminary/abstract-eng.tex}
-
-  % ----------------------------- ABSTRACT (EST) ----------------------------
-  \input{preliminary/abstract-est.tex}
+  % user-submitted abstracts
+  #1
 
   % ----------------------------- ABBREVIATIONS -----------------------------
   {\titleformat{\section}[display]{\Large\bfseries\centering}{}{}{}
