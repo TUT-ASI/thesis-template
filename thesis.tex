@@ -58,14 +58,11 @@
 \addbibresource{literature.bib}
 % \cite -> author year ; \textcite{key} -> author (year); \parencite{key} -> (author year)
 
-% Glossaries Management: https://en.wikibooks.org/wiki/LaTeX/Glossary
-% https://tex.stackexchange.com/questions/300049/remove-empty-pages-before-glossary/300058
 
-\usepackage[nopostdot, toc, nonumberlist, section=section]{glossaries}
-\renewcommand*{\glsclearpage}{} % to prevent empty page before glossary
-\makenoidxglossaries
-% Load Glossary file
+% Load the glossary file
 \loadglsentries{preliminary/glossaries}
+% Glossaries management: https://en.wikibooks.org/wiki/LaTeX/Glossary
+% https://tex.stackexchange.com/questions/300049/remove-empty-pages-before-glossary/300058
 
 
 \input{definitions.tex}

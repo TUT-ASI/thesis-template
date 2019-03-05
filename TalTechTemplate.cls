@@ -48,6 +48,10 @@ marginparsep = 0pt, marginparwidth = 0pt,
 % Note: additional languages can be passed to babel
 %       with \PassOptionsToPackage{someotherlang}{babel}
 
+% Glossaries
+\usepackage[nopostdot, toc, nonumberlist, section=section]{glossaries}
+\renewcommand*{\glsclearpage}{} % to prevent empty page before glossary
+\makenoidxglossaries
 
 % Paragraph setup
 \setlength{\parskip}{12pt}
