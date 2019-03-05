@@ -264,7 +264,7 @@ marginparsep = 0pt, marginparwidth = 0pt,
     Autor: \@authorname
   }{}
 
-  % \today
+  \today
   \pagebreak
 }
 
