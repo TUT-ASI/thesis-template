@@ -347,8 +347,8 @@ marginparsep = 0pt, marginparwidth = 0pt,
     \setcounter{figure}{0}
 
     \titleformat{\section}{\bfseries\Large}{
-      \IfLanguageName{english}{Lisa}{}
-      \IfLanguageName{estonian}{Appendix}{}
+      \IfLanguageName{english}{Appendix}{}
+      \IfLanguageName{estonian}{Lisa}{}
       \thesection}{0.2em}{}
     \renewcommand{\thesection}{\arabic{section} --}
 
