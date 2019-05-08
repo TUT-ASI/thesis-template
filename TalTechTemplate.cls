@@ -51,7 +51,6 @@ marginparsep = 0pt, marginparwidth = 0pt,
 % Glossaries
 \usepackage[nopostdot, nonumberlist, section=section]{glossaries}
 \renewcommand*{\glsclearpage}{} % to prevent empty page before glossary
-\renewcommand{\glsnamefont}[1]{\textbf{#1}} % bold glossary item names
 \makenoidxglossaries
 
 % Paragraph setup
@@ -292,7 +291,7 @@ marginparsep = 0pt, marginparwidth = 0pt,
 
   % ----------------------------- ABBREVIATIONS -----------------------------
   {\titleformat{\section}[display]{\Large\bfseries\centering}{}{}{}
-    \printnoidxglossary[style=long, title={%
+    \printnoidxglossary[title={%
       \IfLanguageName{english}{List of abbreviations and terms}{}%
       \IfLanguageName{estonian}{Lühendite ja mõistete sõnastik}{}%
     }]}
