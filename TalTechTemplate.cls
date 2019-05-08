@@ -250,8 +250,8 @@ marginparsep = 0pt, marginparwidth = 0pt,
 
   \IfLanguageName{english}{
     I hereby certify that I am the sole author of this thesis. All the
-    used materials, references to the literature and the work of others
-    have been referred to. This thesis has not been presented for
+    used materials, the literature and the work of others
+    have been referenced. This thesis has not been presented for
     examination anywhere else.
 
     Author: \@authorname
