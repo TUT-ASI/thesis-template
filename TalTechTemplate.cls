@@ -326,8 +326,12 @@ marginparsep = 0pt, marginparwidth = 0pt,
   }]
 
   \label{EndOfMainPart}
-  \@ifundefined{r@Introduction}{}{\addtocounter{section}{-1}}
-  \@ifundefined{r@Summary}     {}{\addtocounter{section}{-1}}
+
+  % Uncomment these if you insist on not counting Introduction
+  % and Summary in the total amount of chapters, but still want to
+  % number them.
+  %\@ifundefined{r@Introduction}{}{\addtocounter{section}{-1}}
+  %\@ifundefined{r@Summary}     {}{\addtocounter{section}{-1}}
   \newpage
 
   \let\svaddcontentsline\addcontentsline
