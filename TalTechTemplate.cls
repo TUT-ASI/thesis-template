@@ -102,17 +102,17 @@ marginparsep = 0pt, marginparwidth = 0pt,
 
 
 % Titles
-\renewcommand{\contentsname}{\centering \bfseries%
-  \IfLanguageName{english}{Table of Contents}{}%
-  \IfLanguageName{estonian}{Sisukord}{}%
+% Titles
+\addto\captionsenglish{%
+  \renewcommand{\contentsname}{\centering \bfseries Table of Contents}%
+  \renewcommand{\listfigurename}{\centering \bfseries List of Figures}%
+  \renewcommand{\listtablename}{\centering \bfseries List of Tables}%
 }
-\renewcommand{\listfigurename}{\centering \bfseries%
-  \IfLanguageName{english}{List of Figures}{}%
-  \IfLanguageName{estonian}{Jooniste loetelu}{}%
-}
-\renewcommand{\listtablename}{\centering \bfseries%
-  \IfLanguageName{english}{List of Tables}{}%
-  \IfLanguageName{estonian}{Tabelite loetelu}{}%
+
+\addto\captionsestonian{%
+  \renewcommand{\contentsname}{\centering \bfseries Sisukord}%
+  \renewcommand{\listfigurename}{\centering \bfseries Jooniste loetelu}%
+  \renewcommand{\listtablename}{\centering \bfseries Tabelite loetelu}%
 }
 
 \titlespacing*{\section}{0pt}{60pt}{6pt}
