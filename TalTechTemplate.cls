@@ -102,7 +102,6 @@ marginparsep = 0pt, marginparwidth = 0pt,
 
 
 % Titles
-% Titles
 \addto\captionsenglish{%
   \renewcommand{\contentsname}{\centering \bfseries Table of Contents}%
   \renewcommand{\listfigurename}{\centering \bfseries List of Figures}%
