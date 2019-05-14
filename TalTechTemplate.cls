@@ -231,7 +231,7 @@ marginparsep = 0pt, marginparwidth = 0pt,
         \  & \@supervisortitleEst \\
       }{}%
 
-      \@ifundefined{@cosupervisortitle}{}{%
+      \@ifundefined{@cosupervisorname}{}{%
         \IfLanguageName{english}{%
           Co-Supervisor%
           :  & \@cosupervisorname \\
