@@ -220,16 +220,28 @@ marginparsep = 0pt, marginparwidth = 0pt,
 
   \begin{flushright}
     \begin{tabularx}{0.5\textwidth}{rl}
-      \IfLanguageName{english}{Supervisor}{}%
-      \IfLanguageName{estonian}{Juhendaja}{}%
-      :  & \@supervisorname \\
-      \  & \@supervisortitle \\
+      \IfLanguageName{english}{%
+        Supervisor%
+        :  & \@supervisorname \\
+        \  & \@supervisortitle \\
+      }{}%
+      \IfLanguageName{estonian}{%
+        Juhendaja%
+        :  & \@supervisorname \\
+        \  & \@supervisortitleEst \\
+      }{}%
 
       \@ifundefined{@cosupervisortitle}{}{%
-        \IfLanguageName{english}{Co-Supervisor}{}%
-        \IfLanguageName{estonian}{Kaasjuhendaja}{}%
-        :  & \@cosupervisorname \\
-        \  & \@cosupervisortitle \\
+        \IfLanguageName{english}{%
+          Co-Supervisor%
+          :  & \@cosupervisorname \\
+          \  & \@cosupervisortitle \\
+        }{}%
+        \IfLanguageName{estonian}{%
+          Kaasjuhendaja%
+          :  & \@cosupervisorname \\
+          \  & \@cosupervisortitleEst \\
+        }{}%
       }%
     \end{tabularx} \\[0cm]
   \end{flushright}
