@@ -362,11 +362,11 @@ marginparsep = 0pt, marginparwidth = 0pt,
     \setcounter{table}{0}
     \setcounter{figure}{0}
 
-    \titleformat{\section}{\bfseries\Large}{
+    \titleformat{\section}{\bfseries\Large}{%
       \IfLanguageName{english}{Appendix}{}
       \IfLanguageName{estonian}{Lisa}{}
-      \thesection}{0.2em}{}
-    \renewcommand{\thesection}{\arabic{section} --}
+      \thesection \ --}{0.2em}{}
+    \renewcommand{\thesection}{\arabic{section}}
 
     % user-submitted appendices
     #1
