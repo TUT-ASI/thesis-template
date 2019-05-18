@@ -154,8 +154,10 @@ marginparsep = 0pt, marginparwidth = 0pt,
 \newcommand*\worktitleEst[1]{\def\@worktitleEst{\bfseries\uppercase{#1}}}
 \newcommand*\supervisorname[1]{\def\@supervisorname{#1}}
 \newcommand*\supervisortitle[1]{\def\@supervisortitle{#1}}
+\newcommand*\supervisortitleEst[1]{\def\@supervisortitleEst{#1}}
 \newcommand*\cosupervisorname[1]{\def\@cosupervisorname{#1}}
 \newcommand*\cosupervisortitle[1]{\def\@cosupervisortitle{#1}}
+\newcommand*\cosupervisortitleEst[1]{\def\@cosupervisortitleEst{#1}}
 \newcommand*\programcode[1]{\def\@programcode{#1}}
 \newcommand*\studentcode[1]{\def\@studentcode{#1}}
 
