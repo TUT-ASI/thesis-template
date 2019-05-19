@@ -13,7 +13,10 @@
 
 % Some useful packages, not necessary for the template:
 
+\usepackage{easy-todo}      % \todo{} notes
+%\usepackage[disable]{easy-todo} % use this for the final document
 \usepackage{blindtext}      % stubs
+
 \usepackage{url}            % for using URLs
 \usepackage{duckuments}     % image Stubs
 \usepackage{placeins}       % setting FloatBarriers to force flushing of floating objects
@@ -96,5 +99,6 @@
 \epilogue{
   \input{appendix/appendix1.tex}
   \input{appendix/appendix2.tex}
+  \listoftodos
 }
 \end{document}
